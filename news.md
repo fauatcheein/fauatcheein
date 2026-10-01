@@ -1,0 +1,10 @@
+---
+layout: page
+title: News
+permalink: /news/
+---
+<ul class="news-list big">
+  {% for post in site.posts %}
+  <li><span class="meta">{{ post.date | date: "%-d %b %Y" }}</span> <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>

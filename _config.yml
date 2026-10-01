@@ -1,0 +1,50 @@
+# ------------------------------------------------------------------
+#  Site settings — edit these first
+# ------------------------------------------------------------------
+title: Fernando Auat Cheein
+tagline: Professor of Engineering · Director, Harper Institute of Technology
+description: >-
+  Agricultural robotics, AI perception, autonomous systems, digital twins
+  and safety certification for autonomous agricultural machinery.
+
+# If your repository is named  <username>.github.io  leave baseurl empty.
+# If it has any other name (e.g. "website"), set baseurl: "/website"
+url: "https://YOUR-GITHUB-USERNAME.github.io"
+baseurl: ""
+
+author:
+  name: Fernando Auat Cheein
+  email: "your.name@harper-adams.ac.uk"     # shown on the Contact section
+  affiliation: Harper Adams University, Newport, Shropshire, UK
+
+# Profile links — delete any line you don't want shown
+links:
+  scholar: "https://scholar.google.com/citations?user=YOUR_ID"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+  linkedin: "https://www.linkedin.com/in/YOUR-PROFILE"
+  github: "https://github.com/YOUR-GITHUB-USERNAME"
+  institution: "https://www.harper-adams.ac.uk"
+
+# Top navigation
+nav:
+  - { title: About, url: "/" }
+  - { title: Research, url: "/research/" }
+  - { title: Publications, url: "/publications/" }
+  - { title: Team, url: "/team/" }
+  - { title: News, url: "/news/" }
+
+# ------------------------------------------------------------------
+#  Build settings (GitHub Pages supports these out of the box)
+# ------------------------------------------------------------------
+markdown: kramdown
+permalink: /news/:year/:month/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
