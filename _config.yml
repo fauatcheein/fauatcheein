@@ -9,21 +9,21 @@ description: >-
 
 # If your repository is named  <username>.github.io  leave baseurl empty.
 # If it has any other name (e.g. "website"), set baseurl: "/website"
-url: "https://YOUR-GITHUB-USERNAME.github.io"
+url: "https://fauatcheein.github.io"
 baseurl: ""
 
 author:
   name: Fernando Auat Cheein
-  email: "your.name@harper-adams.ac.uk"     # shown on the Contact section
+  email: "fauat [at] harper [hyphen] adams [dot] ac [dot] uk"     # shown on the Contact section
   affiliation: Harper Adams University, Newport, Shropshire, UK
 
 # Profile links — delete any line you don't want shown
 links:
-  scholar: "https://scholar.google.com/citations?user=YOUR_ID"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
-  linkedin: "https://www.linkedin.com/in/YOUR-PROFILE"
-  github: "https://github.com/YOUR-GITHUB-USERNAME"
+  scholar: "https://scholar.google.com/citations?user=glxar60AAAAJ&hl=en&oi=ao"
+  orcid: "https://orcid.org/0000-0002-6347-7696"
+  linkedin: "linkedin.com/in/fernando-auat-cheein-30743a59"
   institution: "https://www.harper-adams.ac.uk"
+  scopus: "https://www.scopus.com/authid/detail.uri?authorId=23049317700"
 
 # Top navigation
 nav:
