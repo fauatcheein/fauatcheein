@@ -10,7 +10,7 @@ description: >-
 # If your repository is named  <username>.github.io  leave baseurl empty.
 # If it has any other name (e.g. "website"), set baseurl: "/website"
 url: "https://fauatcheein.github.io"
-baseurl: ""
+baseurl: "/fauatcheein"   # repo is named "fauatcheein". If you rename it to fauatcheein.github.io, set this to ""
 
 author:
   name: Fernando Auat Cheein
@@ -21,7 +21,7 @@ author:
 links:
   scholar: "https://scholar.google.com/citations?user=glxar60AAAAJ&hl=en&oi=ao"
   orcid: "https://orcid.org/0000-0002-6347-7696"
-  linkedin: "linkedin.com/in/fernando-auat-cheein-30743a59"
+  linkedin: "https://www.linkedin.com/in/fernando-auat-cheein-30743a59"
   institution: "https://www.harper-adams.ac.uk"
   scopus: "https://www.scopus.com/authid/detail.uri?authorId=23049317700"
 

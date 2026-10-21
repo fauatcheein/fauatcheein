@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>{{ site.author.name }}<br>{{ site.author.affiliation }}</p>
+    <ul class="profile-links">
+      {% if site.links.scholar %}<li><a href="{{ site.links.scholar }}">Google Scholar</a></li>{% endif %}
+      {% if site.links.orcid %}<li><a href="{{ site.links.orcid }}">ORCID</a></li>{% endif %}
+      {% if site.links.scopus %}<li><a href="{{ site.links.scopus }}">Scopus</a></li>{% endif %}
+      {% if site.links.linkedin %}<li><a href="{{ site.links.linkedin }}">LinkedIn</a></li>{% endif %}
+      {% if site.links.institution %}<li><a href="{{ site.links.institution }}">Harper Adams University</a></li>{% endif %}
+    </ul>
+  </div>
+</footer>

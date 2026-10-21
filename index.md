@@ -27,8 +27,8 @@ title: About
 <section class="two-col">
   <div>
     <h2>About</h2>
-    <p>I am Professor of Engineering and Director of the Harper Institute of Technology at Harper Adams University, UK, which I joined in October 2024 to build the research dimension of the Engineering Department. I also hold a post as Profesor Titular at Universidad Técnica Federico Santa María (UTFSM), Chile.</p>
-    <p>Before Harper Adams I was Associate Professor at Heriot-Watt University and the National Robotarium (2022–2024). My career has taken me across Argentina, Chile, Spain, Brazil, Portugal and Poland, and I collaborate widely across Europe, the Americas and Australia.</p>
+    <p>I am Professor of Engineering and Director of the Harper Institute of Technology at Harper Adams University, UK, which I joined in October 2024 to build the research dimension of the Engineering Department.</p>
+    <p>Before Harper Adams I was Associate Professor at Heriot-Watt University and the National Robotarium (2022–2024), and previously Profesor Titular at Universidad Técnica Federico Santa María (UTFSM), Chile. My career has taken me across Argentina, Chile, Spain, Brazil, Portugal and Poland, and I collaborate widely across Europe, the Americas and Australia.</p>
     <p>I am a Fellow of the Institution of Agricultural Engineers and of the Royal Society of Biology, and serve as Associate Editor for the <em>Journal of Field Robotics</em> and <em>IEEE/ASME Transactions on Mechatronics</em>.</p>
   </div>
   <div>
@@ -54,5 +54,5 @@ title: About
 <section id="contact" class="contact">
   <h2>Contact</h2>
   <p>Prospective PhD students, postdocs and industry partners are welcome to get in touch.</p>
-  <p><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><br>{{ site.author.affiliation }}</p>
+  <p><span class="email">{{ site.author.email }}</span><br>{{ site.author.affiliation }}</p>
 </section>

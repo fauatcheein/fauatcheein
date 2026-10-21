@@ -1,0 +1,68 @@
+# Selected publications — one block per paper. Newest year appears first.
+# Fields: title, authors, venue, year (required); url, doi, pdf, code, note (optional).
+# Copy a block, paste it, and change the text.
+
+- title: "Consistent lidar-only SLAM for legged agricultural robots in arboreal environments via robust dimensionality reduction"
+  authors: "Nazate-Burgos, P., Torres-Torriti, M., Huang, S. and Auat Cheein, F."
+  venue: "Computers and Electronics in Agriculture, 247"
+  year: 2026
+  url: "https://hau.repository.guildhe.ac.uk/id/eprint/18359/"
+
+- title: "Good practices of artificial intelligence in biosystems engineering research"
+  authors: "Vallejo, M., Chen, C., Rovira-Más, F. and Auat Cheein, F."
+  venue: "Biosystems Engineering, 263"
+  year: 2026
+  url: "https://hau.repository.guildhe.ac.uk/id/eprint/18329/"
+
+- title: "Fuzzy PID Speed Control System for Sprayer Vehicles Based on Canopy Density"
+  authors: "Wang, Y., Emekwuru, N., Jin, C. and Auat Cheein, F."
+  venue: "Algorithms, 19 (5)"
+  year: 2026
+  url: "https://hau.repository.guildhe.ac.uk/id/eprint/18375/"
+
+- title: "Dynamic weed control using selective laser application with object tracking and target scheduling"
+  authors: "Vargas Fernández, J.I., Wane, S., Arevalo-Ramirez, T. and Auat Cheein, F."
+  venue: "Computers and Electronics in Agriculture, 239"
+  year: 2025
+  url: "https://hau.repository.guildhe.ac.uk/id/eprint/18287/"
+
+- title: "A multi-spectral and hyperspectral image dataset for evaluating chemical traits and the water status of avocado, olive and grape through leaf dehydration under laboratory conditions"
+  authors: "Estrada, J.S., Demarco, R., Johnson, C.M., Zañartu, M., Fuentes, A. and Auat Cheein, F."
+  venue: "Scientific Reports, 15"
+  year: 2025
+  doi: "10.1038/s41598-025-85714-8"
+  url: "https://doi.org/10.1038/s41598-025-85714-8"
+  note: "Open dataset"
+
+- title: "Potato plant phenotyping and characterisation utilising machine learning techniques: A state-of-the-art review and current trends"
+  authors: "Johnson, C.M., Estrada, J.S. and Auat Cheein, F."
+  venue: "Computers and Electronics in Agriculture, 234"
+  year: 2025
+  doi: "10.1016/j.compag.2025.110304"
+  url: "https://doi.org/10.1016/j.compag.2025.110304"
+
+- title: "Exploring the Frequency Domain Point Cloud Processing for Localisation Purposes in Arboreal Environments"
+  authors: "Devanna, R.P., Torres-Torriti, M., Sacilik, K., Cetin, N. and Auat Cheein, F."
+  venue: "Algorithms, 18 (8), 522"
+  year: 2025
+  url: "https://hau.repository.guildhe.ac.uk/id/eprint/18265/"
+
+- title: "Model Predictive Path-Following Framework for Generalized N-Trailer Vehicles in the Presence of Dynamic Obstacles Modeled as Soft Constraints"
+  authors: "Deniz, N.N. and Auat Cheein, F."
+  venue: "IEEE Transactions on Automation Science and Engineering, 22, 7018–7032"
+  year: 2024
+  doi: "10.1109/TASE.2024.3458809"
+  url: "https://doi.org/10.1109/TASE.2024.3458809"
+
+- title: "Deep Learning Enhanced Feature Extraction of Potholes Using Vision and LiDAR Data for Road Maintenance"
+  authors: "Karukayil, A., Quail, C. and Auat Cheein, F."
+  venue: "IEEE Access, 12"
+  year: 2024
+  url: "https://hau.repository.guildhe.ac.uk/id/eprint/18170/"
+
+- title: "Agricultural robotics: Unmanned robotic service units in agricultural tasks"
+  authors: "Auat Cheein, F. and Carelli, R."
+  venue: "IEEE Industrial Electronics Magazine, 7 (3), 48–58"
+  year: 2013
+  doi: "10.1109/MIE.2013.2252957"
+  url: "https://doi.org/10.1109/MIE.2013.2252957"

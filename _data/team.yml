@@ -1,0 +1,25 @@
+# Team — groups appear in this order. Fields per person: name, role (required); topic, url (optional).
+# To add someone, copy a "- name:" block under the right group.
+
+- group: Group lead
+  members:
+    - name: Prof. Fernando Auat Cheein
+      role: Professor of Engineering · Director, Harper Institute of Technology
+      topic: Agricultural robotics, AI perception, digital twins, safety certification
+
+# - group: PhD students
+#   members:
+#     - name: Student Name
+#       role: PhD student
+#       topic: Thesis topic
+#
+# - group: Postdoctoral researchers
+#   members:
+#     - name: Researcher Name
+#       role: Research Fellow
+#       topic: Project
+#
+# - group: Alumni
+#   members:
+#     - name: Name
+#       role: PhD 2024, now at …
