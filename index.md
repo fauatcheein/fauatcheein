@@ -21,14 +21,14 @@ title: About
   <div><strong>200+</strong><span>peer-reviewed papers</span></div>
   <div><strong>~40</strong><span>h-index</span></div>
   <div><strong>22</strong><span>patents</span></div>
-  <div><strong>Top 2%</strong><span>Stanford/Elsevier scientists, 2023–2025</span></div>
+  <div><strong>Top 2%</strong><span>Stanford/Elsevier scientists, 2023–2026</span></div>
 </section>
 
 <section class="two-col">
   <div>
     <h2>About</h2>
     <p>I am Professor of Engineering and Director of the Harper Institute of Technology at Harper Adams University, UK, which I joined in October 2024 to build the research dimension of the Engineering Department.</p>
-    <p>Before Harper Adams I was Associate Professor at Heriot-Watt University and the National Robotarium (2022–2024), and previously Profesor Titular at Universidad Técnica Federico Santa María (UTFSM), Chile. My career has taken me across Argentina, Chile, Spain, Brazil, Portugal and Poland, and I collaborate widely across Europe, the Americas and Australia.</p>
+    <p>Before Harper Adams I was Associate Professor at Heriot-Watt University and the National Robotarium (2022–2024), and previously Profesor Titular at Universidad Técnica Federico Santa María (UTFSM), Chile. My career has taken me across Argentina, Chile, Spain, Brazil, Portugal and many other countries, and I collaborate widely across Europe, the Americas and Australia.</p>
     <p>I am a Fellow of the Institution of Agricultural Engineers and of the Royal Society of Biology, and serve as Associate Editor for the <em>Journal of Field Robotics</em> and <em>IEEE/ASME Transactions on Mechatronics</em>.</p>
   </div>
   <div>
@@ -54,5 +54,12 @@ title: About
 <section id="contact" class="contact">
   <h2>Contact</h2>
   <p>Prospective PhD students, postdocs and industry partners are welcome to get in touch.</p>
-  <p><span class="email">{{ site.author.email }}</span><br>{{ site.author.affiliation }}</p>
+  <div class="contact-row">
+    <p><span class="email">{{ site.author.email }}</span><br>{{ site.author.affiliation }}<br>
+    <a href="{{ site.links.linkedin }}">Connect on LinkedIn</a></p>
+    <figure class="qr">
+      <a href="{{ site.links.linkedin }}"><img src="{{ '/assets/img/linkedin-qr.svg' | relative_url }}" alt="QR code linking to Fernando Auat Cheein's LinkedIn profile" width="132" height="132"></a>
+      <figcaption>Scan for LinkedIn</figcaption>
+    </figure>
+  </div>
 </section>
