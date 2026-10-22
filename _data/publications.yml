@@ -1,68 +1,337 @@
 # Selected publications — one block per paper. Newest year appears first.
-# Fields: title, authors, venue, year (required); url, doi, pdf, code, note (optional).
-# Copy a block, paste it, and change the text.
+# Fields: title, authors, venue, year (required); doi, url, pdf, code, note (optional).
+# type: journal (default) or conference. Copy a block, paste it, and change the text.
+
+# ---------------------------------------------------------------- 2026
+- title: "Infrared hyperspectral imaging integrated with an attentive spatial-spectral neural network for precise postharvest detection of Aspergillus flavus contamination and nutrient variations in peanut kernels"
+  authors: "Guo, Z., Qin, Y., Shao, X., Auat Cheein, F., Xia, L., Guo, Y., Sun, X., Du, F."
+  venue: "Infrared Physics and Technology, 154, 106402"
+  year: 2026
+  doi: "10.1016/j.infrared.2026.106402"
+
+- title: "A Single-Step Optimization-Based Kinematic Controller for Real-Time Path Tracking of Legged Robots"
+  authors: "Zapata, S., Urvina, R., Aro, K., Aguilar, E., Auat Cheein, F., Prado, A."
+  venue: "IEEE Transactions on Industrial Informatics"
+  year: 2026
+  doi: "10.1109/TII.2025.3609176"
 
 - title: "Consistent lidar-only SLAM for legged agricultural robots in arboreal environments via robust dimensionality reduction"
-  authors: "Nazate-Burgos, P., Torres-Torriti, M., Huang, S. and Auat Cheein, F."
+  authors: "Nazate-Burgos, P., Torres-Torriti, M., Huang, S., Auat Cheein, F."
   venue: "Computers and Electronics in Agriculture, 247"
   year: 2026
   url: "https://hau.repository.guildhe.ac.uk/id/eprint/18359/"
 
-- title: "Good practices of artificial intelligence in biosystems engineering research"
-  authors: "Vallejo, M., Chen, C., Rovira-Más, F. and Auat Cheein, F."
-  venue: "Biosystems Engineering, 263"
+- title: "Multimodal data fusion and attention-based deep learning for estimating winter wheat chlorophyll"
+  authors: "Zhang, Y. et al., Auat Cheein, F."
+  venue: "Computers and Electronics in Agriculture, 111536"
   year: 2026
-  url: "https://hau.repository.guildhe.ac.uk/id/eprint/18329/"
+  doi: "10.1016/j.compag.2026.111536"
+
+- title: "Design and Performance Analysis of a Delta Robot for High-Speed Seed Cutting"
+  authors: "Huang, J. et al., Auat Cheein, F."
+  venue: "Journal of Field Robotics"
+  year: 2026
+  doi: "10.1002/rob.70126"
+
+- title: "Assessment of avocado water stress using multispectral imaging and deep learning: Toward sustainable irrigation in precision agriculture"
+  authors: "Valdivia, A. et al., Auat Cheein, F."
+  venue: "Expert Systems with Applications, 132688"
+  year: 2026
+  doi: "10.1016/j.eswa.2026.132688"
+
+- title: "From plots to region: Machine learning-based UAV-satellite integration for mapping fractional green cover"
+  authors: "Li et al., Auat Cheein, F."
+  venue: "Artificial Intelligence in Agriculture"
+  year: 2026
+  doi: "10.1016/j.aiia.2026.04.008"
+
+- title: "3D crop reconstruction: A review of hyperspectral and multispectral approaches"
+  authors: "Karukayil, A., Mota, J.F.C., Auat Cheein, F."
+  venue: "Computers and Electronics in Agriculture, 241, 111282"
+  year: 2026
+  doi: "10.1016/j.compag.2025.111282"
+
+- title: "Dielectric feature-driven dual prediction of moisture content and bulk density for rice quality assessment"
+  authors: "Çetin, N., Ozbey, B., Sacilik, K., Auat Cheein, F."
+  venue: "Computers and Electronics in Agriculture, 241, 111276"
+  year: 2026
+  doi: "10.1016/j.compag.2025.111276"
+
+- title: "Good practices of artificial intelligence in biosystems engineering research"
+  authors: "Vallejo, M., Chen, C., Rovira-Más, F., Auat Cheein, F."
+  venue: "Biosystems Engineering, 263, 104373"
+  year: 2026
+  doi: "10.1016/j.biosystemseng.2025.104373"
+  note: "Invited letter to the editor"
+
+- title: "Noninvasive Sensing of Foliar Moisture in Hydroponic Crops Using Leaf-Based Electric Field Energy Harvesters"
+  authors: "Menéndez-Granizo, O., Chugá-Portilla, A., Arevalo-Ramirez, T., Vasconez, J.P., Auat Cheein, F., Prado, Á."
+  venue: "Biosensors, 16 (1), 13"
+  year: 2026
+  doi: "10.3390/bios16010013"
+
+- title: "Integrated microwave cavity perturbation sensor for nondestructive estimation of moisture"
+  authors: "Precoppe, M. et al., Auat Cheein, F."
+  venue: "PLOS ONE, e0343435"
+  year: 2026
+  doi: "10.1371/journal.pone.0343435"
+
+- title: "Prediction of vegetation indices from downsampled hyperspectral data using machine learning"
+  authors: "Vargas, J. et al., Auat Cheein, F."
+  venue: "PLOS ONE, e0323158"
+  year: 2026
+  doi: "10.1371/journal.pone.0323158"
+
+- title: "Efficient quality classification of pretreated and dehydrated carrots using feature selection"
+  authors: "Çetin, N. et al., Auat Cheein, F."
+  venue: "Journal of the Science of Food and Agriculture"
+  year: 2026
+  doi: "10.1002/jsfa.70413"
+
+- title: "Development of a parallel plate dielectric spectroscopy device for non-destructive quality assessment of agricultural products"
+  authors: "Ozbey, B. et al., Auat Cheein, F."
+  venue: "European Food Research and Technology"
+  year: 2026
+  doi: "10.1007/s00217-025-05001-8"
+
+- title: "Integrative Nutritional Assessment of Avocado Leaves Using Entropy-Weighted Spectral Indices"
+  authors: "Estrada, J.S. et al., Auat Cheein, F."
+  venue: "Computation, 14 (2), 33"
+  year: 2026
+  doi: "10.3390/computation14020033"
+
+- title: "Litchi flower targets integrating multi-scale attention and decoupled detection"
+  authors: "Li et al., Auat Cheein, F."
+  venue: "Smart Agricultural Technology, 102179"
+  year: 2026
+  doi: "10.1016/j.atech.2026.102179"
 
 - title: "Fuzzy PID Speed Control System for Sprayer Vehicles Based on Canopy Density"
-  authors: "Wang, Y., Emekwuru, N., Jin, C. and Auat Cheein, F."
+  authors: "Wang, Y., Emekwuru, N., Jin, C., Auat Cheein, F."
   venue: "Algorithms, 19 (5)"
   year: 2026
   url: "https://hau.repository.guildhe.ac.uk/id/eprint/18375/"
 
-- title: "Dynamic weed control using selective laser application with object tracking and target scheduling"
-  authors: "Vargas Fernández, J.I., Wane, S., Arevalo-Ramirez, T. and Auat Cheein, F."
-  venue: "Computers and Electronics in Agriculture, 239"
+# ---------------------------------------------------------------- 2025
+- title: "Opportunities and challenges for monitoring terrestrial biodiversity in the robotics age"
+  authors: "Auat Cheein, F. et al."
+  venue: "Nature Ecology and Evolution"
   year: 2025
-  url: "https://hau.repository.guildhe.ac.uk/id/eprint/18287/"
+  doi: "10.1038/s41559-025-02704-9"
+
+- title: "Robust Moving Horizon Estimation for Autonomous Agricultural Vehicles with GNSS Outliers"
+  authors: "Shamshiri, R.R. et al., Auat Cheein, F."
+  venue: "IEEE Robotics and Automation Letters"
+  year: 2025
+  doi: "10.1109/LRA.2025.3606377"
+
+- title: "Exploring the Frequency Domain Point Cloud Processing for Localisation Purposes in Arboreal Environments"
+  authors: "Karukayil, A., Mota, J.F.C., Auat Cheein, F."
+  venue: "Algorithms, 18 (8), 522"
+  year: 2025
+  doi: "10.3390/a18080522"
 
 - title: "A multi-spectral and hyperspectral image dataset for evaluating chemical traits and the water status of avocado, olive and grape through leaf dehydration under laboratory conditions"
-  authors: "Estrada, J.S., Demarco, R., Johnson, C.M., Zañartu, M., Fuentes, A. and Auat Cheein, F."
-  venue: "Scientific Reports, 15"
+  authors: "Estrada, J.S., Demarco, R., Johnson, C.M., Zañartu, M., Fuentes, A., Auat Cheein, F."
+  venue: "Scientific Reports, 15 (1), 2973"
   year: 2025
   doi: "10.1038/s41598-025-85714-8"
-  url: "https://doi.org/10.1038/s41598-025-85714-8"
   note: "Open dataset"
 
+- title: "Dynamic weed control using selective laser application with object tracking and target scheduling"
+  authors: "Vargas Fernández, J.I., Wane, S., Arevalo-Ramirez, T., Auat Cheein, F."
+  venue: "Computers and Electronics in Agriculture, 239, 111004"
+  year: 2025
+  doi: "10.1016/j.compag.2025.111004"
+
+- title: "Novel nocturnal insect pest monitoring for sustainable crop protection using ensemble augmented deep learning classification"
+  authors: "Zhao, H., Fu, B., Auat Cheein, F., Butler, M., Harris, W.E., Pope, T.W., Roberts, J.M."
+  venue: "Smart Agricultural Technology, 12, 101244"
+  year: 2025
+  doi: "10.1016/j.atech.2025.101244"
+
+- title: "Assessment of light environment conditions for reconstruction of multispectral images by conditional adversarial networks"
+  authors: "Arevalo-Ramirez, T., Menéndez Granizo, O., Villacrés, J., Guevara, J., Guamán-Rivera, R., Demarco, R., Auat Cheein, F."
+  venue: "Biosystems Engineering, 260, 104305"
+  year: 2025
+  doi: "10.1016/j.biosystemseng.2025.104305"
+
+- title: "ESM-YOLOv11: A lightweight deep learning framework for real-time peanut leaf spot disease detection and precision severity quantification in field conditions"
+  authors: "Zhang, Y., Liu, J., Li, S., Feng, S., Sun, Z., Cui, Y., Liu, H., Zhang, J., Auat Cheein, F., Guo, W."
+  venue: "Computers and Electronics in Agriculture, 238, 110801"
+  year: 2025
+  doi: "10.1016/j.compag.2025.110801"
+
+- title: "Design and implementation of a seed potato cutting robot using deep learning and delta robotic system with accuracy and speed for automated processing of agricultural products"
+  authors: "Huang, J., Yi, F., Cui, Y., Wang, X., Jin, C., Auat Cheein, F."
+  venue: "Computers and Electronics in Agriculture, 237, 110716"
+  year: 2025
+  doi: "10.1016/j.compag.2025.110716"
+
+- title: "SPADE: A Deep Learning Framework for Automated Seed Potato Cutting"
+  authors: "Huang, J. et al., Auat Cheein, F."
+  venue: "INMATEH – Agricultural Engineering, 77"
+  year: 2025
+  doi: "10.35633/inmateh-77-92"
+
 - title: "Potato plant phenotyping and characterisation utilising machine learning techniques: A state-of-the-art review and current trends"
-  authors: "Johnson, C.M., Estrada, J.S. and Auat Cheein, F."
+  authors: "Johnson, C.M., Estrada, J.S., Auat Cheein, F."
   venue: "Computers and Electronics in Agriculture, 234"
   year: 2025
   doi: "10.1016/j.compag.2025.110304"
-  url: "https://doi.org/10.1016/j.compag.2025.110304"
 
-- title: "Exploring the Frequency Domain Point Cloud Processing for Localisation Purposes in Arboreal Environments"
-  authors: "Devanna, R.P., Torres-Torriti, M., Sacilik, K., Cetin, N. and Auat Cheein, F."
-  venue: "Algorithms, 18 (8), 522"
+- title: "A cloud point methodology for evaluating the integrity risk of arboreal crop during field coverage of agricultural machinery"
+  authors: "Kachappilly, A., Devanna, R., Torres-Torriti, M., Auat Cheein, F."
+  venue: "Computers and Electronics in Agriculture, 231, 109844"
   year: 2025
-  url: "https://hau.repository.guildhe.ac.uk/id/eprint/18265/"
+  doi: "10.1016/j.compag.2024.109844"
 
+- title: "Online path tracking with an integrated H∞ robust adaptive controller for a double-Ackermann steering robot for orchard waypoint navigation"
+  authors: "Shamshiri, R.R., Azimi, A., Behjati, M., Ghasemzadeh, A., Dworak, V., Weltzien, C., Karydis, K., Auat Cheein, F."
+  venue: "International Journal of Intelligent Robotics and Applications, 9 (1), 257–277"
+  year: 2025
+  doi: "10.1007/s41315-024-00379-2"
+
+- title: "Model comparison and hyperparameter optimization for visible and near-infrared (Vis-NIR) spectral classification of dehydrated banana slices"
+  authors: "Buzpinar, M.A., Gunaydin, S., Kavuncuoglu, E., Cetin, N., Sacilik, K., Auat Cheein, F."
+  venue: "Expert Systems with Applications, 283, 127858"
+  year: 2025
+  doi: "10.1016/j.eswa.2025.127858"
+
+- title: "Band-selection in spectroscopy information for vegetation health monitoring using explainable models"
+  authors: "Estrada, J.S., Auat Cheein, F."
+  venue: "IFAC-PapersOnLine, 59 (23), 108–113"
+  year: 2025
+  doi: "10.1016/j.ifacol.2025.11.772"
+  type: conference
+
+# ---------------------------------------------------------------- 2024
 - title: "Model Predictive Path-Following Framework for Generalized N-Trailer Vehicles in the Presence of Dynamic Obstacles Modeled as Soft Constraints"
-  authors: "Deniz, N.N. and Auat Cheein, F."
+  authors: "Deniz, N.N., Auat Cheein, F."
   venue: "IEEE Transactions on Automation Science and Engineering, 22, 7018–7032"
   year: 2024
   doi: "10.1109/TASE.2024.3458809"
-  url: "https://doi.org/10.1109/TASE.2024.3458809"
 
-- title: "Deep Learning Enhanced Feature Extraction of Potholes Using Vision and LiDAR Data for Road Maintenance"
-  authors: "Karukayil, A., Quail, C. and Auat Cheein, F."
-  venue: "IEEE Access, 12"
+- title: "Deep Learning Enhanced Feature Extraction of Potholes Using Vision and LiDAR Data for Road Condition Assessment"
+  authors: "Karukayil, A. et al., Auat Cheein, F."
+  venue: "IEEE Access"
   year: 2024
-  url: "https://hau.repository.guildhe.ac.uk/id/eprint/18170/"
+  doi: "10.1109/ACCESS.2024.3512783"
+
+- title: "Exploring Plant Phenotyping through Displacement Current Energy Harvesters-Based Self-Powered Sensor"
+  authors: "Menéndez, O. et al., Auat Cheein, F."
+  venue: "IECON 2024 – 50th Annual Conference of the IEEE Industrial Electronics Society"
+  year: 2024
+  doi: "10.1109/IECON55916.2024.10905108"
+  type: conference
+
+- title: "Generalised 2-Trailer Vehicle's Dataset with LiDAR Point Cloud and Last Trailer's Position Measurements"
+  authors: "Deniz, N., Auat Cheein, F."
+  venue: "IEEE International Conference on Industrial Technology (ICIT)"
+  year: 2024
+  doi: "10.1109/ICIT58233.2024.10540788"
+  note: "Open dataset"
+  type: conference
+
+- title: "Rapid Roboting Towards Fruit Harvesting Tool Design and Implementation in Robotic Farming"
+  authors: "Hoe, L., Auat Cheein, F."
+  venue: "IEEE International Conference on Industrial Technology (ICIT)"
+  year: 2024
+  doi: "10.1109/ICIT58233.2024.10540887"
+  type: conference
+
+- title: "Water Content Classification on Leaves Based on Multi-Spectral Imagery and Machine Learning Techniques for Wildfire Prevention"
+  authors: "Estrada, J.S., Zañartu, M., Demarco, R., Fuentes, A., Auat Cheein, F."
+  venue: "IEEE International Conference on Industrial Technology (ICIT)"
+  year: 2024
+  doi: "10.1109/ICIT58233.2024.10540771"
+  type: conference
+
+- title: "City Road Condition Evaluation Through Artificial Vision Information When Driving: A Machine Learning Approach"
+  authors: "Karukayil, A., Auat Cheein, F."
+  venue: "International Conference on Electrical, Computer, and Energy Technologies (ICECET)"
+  year: 2024
+  doi: "10.1109/ICECET61485.2024.10698144"
+  type: conference
+
+- title: "Algebraic-Based Velocity Profiling and Path Tracking of a Legged Robot: A Single Leg Case Study"
+  authors: "Okab, Y., Auat Cheein, F."
+  venue: "International Conference on Electrical, Computer, and Energy Technologies (ICECET)"
+  year: 2024
+  doi: "10.1109/ICECET61485.2024.10698035"
+  type: conference
+
+# ---------------------------------------------------------------- 2023 and earlier (selected)
+- title: "Legged Robots in the Agricultural Context: Analysing Their Traverse Capabilities and Performance"
+  authors: "Quail, C., Emonot-De Carolis, E., Auat Cheein, F."
+  venue: "IECON 2023 – Annual Conference of the IEEE Industrial Electronics Society"
+  year: 2023
+  doi: "10.1109/IECON51785.2023.10312233"
+  type: conference
+
+- title: "Assessment of Convolutional Neural Networks for Asset Detection in Dynamic Automation Construction Environments"
+  authors: "Guaman-Rivera, R., Menendez, O., Arevalo-Ramirez, T., Aro, K., Prado, A., Garcia-Alvarado, R., Auat Cheein, F."
+  venue: "IEEE CHILEAN Conference on Electrical, Electronics Engineering, Information and Communication Technologies (ChileCon)"
+  year: 2023
+  doi: "10.1109/CHILECON60335.2023.10418631"
+  type: conference
+
+- title: "Assessment of Deep Reinforcement Learning Algorithms for Three-Phase Inverter Control"
+  authors: "Menéndez, O., López-Caiza, D., Tarisciotti, L., Ruiz, F., Auat Cheein, F., Rodríguez, J."
+  venue: "COBEP 2023 / IEEE SPEC 2023"
+  year: 2023
+  doi: "10.1109/SPEC56436.2023.10407331"
+  type: conference
+
+- title: "3D Printing Deformation Estimation Using Artificial Vision Strategies for Smart-Construction"
+  authors: "Villacres, J., Guaman, R., Menendez, O., Auat Cheein, F."
+  venue: "IECON 2021 – Annual Conference of the IEEE Industrial Electronics Society"
+  year: 2021
+  doi: "10.1109/IECON48115.2021.9589770"
+  type: conference
+
+- title: "Adaptive nonlinear MPC for efficient trajectory tracking applied to autonomous mining skid-steer mobile robots"
+  authors: "Prado, A.J., Chavez, D., Camacho, O., Torres-Torriti, M., Auat Cheein, F."
+  venue: "IEEE ANDESCON 2020"
+  year: 2020
+  doi: "10.1109/ANDESCON50619.2020.9272162"
+  type: conference
+
+- title: "LFuji-air dataset: Annotated 3D LiDAR point clouds of Fuji apple trees for fruit detection scanned under different forced air flow conditions"
+  authors: "Gené-Mola, J., Gregorio, E., Auat Cheein, F., Guevara, J., Llorens, J., Sanz-Cortiella, R., Escolà, A., Rosell-Polo, J.R."
+  venue: "Data in Brief, 29, 105248"
+  year: 2020
+  doi: "10.1016/j.dib.2020.105248"
+  note: "Open dataset"
+
+- title: "Machine learning for computer-aided polyp detection using wavelets and content-based image"
+  authors: "Viscaino, M., Auat Cheein, F."
+  venue: "Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)"
+  year: 2019
+  doi: "10.1109/EMBC.2019.8857831"
+  type: conference
+
+- title: "Collision-free navigation of N-trailer vehicles with motion constraints"
+  authors: "Guevara, L., Torres-Torriti, M., Auat Cheein, F."
+  venue: "12th International Workshop on Robot Motion and Control (RoMoCo)"
+  year: 2019
+  type: conference
+
+- title: "Social robot navigation based on HRI non-verbal communication: A case study on avocado harvesting"
+  authors: "Vasconez, J.P., Guevara, L., Auat Cheein, F."
+  venue: "ACM Symposium on Applied Computing"
+  year: 2019
+  type: conference
+
+- title: "Ground Disturbance Rejection Approach for Mobile Robotic Manipulators with Hydraulic Actuators"
+  authors: "Rigotti-Thompson, M., Torres-Torriti, M., Auat Cheein, F., Troni, G."
+  venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  year: 2018
+  type: conference
 
 - title: "Agricultural robotics: Unmanned robotic service units in agricultural tasks"
-  authors: "Auat Cheein, F. and Carelli, R."
+  authors: "Auat Cheein, F., Carelli, R."
   venue: "IEEE Industrial Electronics Magazine, 7 (3), 48–58"
   year: 2013
   doi: "10.1109/MIE.2013.2252957"
-  url: "https://doi.org/10.1109/MIE.2013.2252957"
+  note: "Cited in academic and industrial patents"

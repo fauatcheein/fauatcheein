@@ -31,6 +31,7 @@ nav:
   - { title: Research, url: "/research/" }
   - { title: Publications, url: "/publications/" }
   - { title: Team, url: "/team/" }
+  - { title: CV, url: "/cv/" }
   - { title: News, url: "/news/" }
 
 # ------------------------------------------------------------------

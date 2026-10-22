@@ -7,19 +7,58 @@
       role: Professor of Engineering · Director, Harper Institute of Technology
       topic: Agricultural robotics, AI perception, digital twins, safety certification
 
-# - group: PhD students
-#   members:
-#     - name: Student Name
-#       role: PhD student
-#       topic: Thesis topic
-#
-# - group: Postdoctoral researchers
-#   members:
-#     - name: Researcher Name
-#       role: Research Fellow
-#       topic: Project
-#
-# - group: Alumni
-#   members:
-#     - name: Name
-#       role: PhD 2024, now at …
+- group: Postdoctoral researchers
+  members:
+    - name: Dr. Nahuel Deniz
+      role: Postdoctoral researcher
+
+- group: PhD researchers
+  members:
+    - name: Sebastian Vega
+      role: PhD researcher, Harper Adams University
+    - name: Juan Vargas
+      role: PhD researcher, Harper Adams University
+    - name: Ciaran Johnson
+      role: PhD researcher, Heriot-Watt University
+    - name: Christopher Quail
+      role: PhD researcher, Heriot-Watt University
+    - name: Abhiram Karukayil
+      role: PhD researcher, Heriot-Watt University
+    - name: Sebastian Estrada
+      role: PhD researcher, UTFSM, Chile
+    - name: Rosa Devanna
+      role: PhD researcher, STIIMA, Italy
+
+- group: Former postdoctoral researchers
+  members:
+    - name: Dr. Lucas Veronese
+      role: Now at NVIDIA
+    - name: Dr. Lucio Salinas
+      role: Now Researcher, CONICET, Argentina
+    - name: Dr. Oswaldo Menéndez
+      role: Now Assistant Professor, Universidad Católica del Norte, Chile
+
+- group: PhD graduates
+  members:
+    - name: Dr. Franco Jorquera
+      role: PhD 2025 · Assistant Professor, Universidad Técnica Federico Santa María, Chile
+    - name: Dr. Michelle Viscaíno
+      role: PhD 2023 · Assistant Professor, Escuela Politécnica Nacional, Quito; former postdoc, UC Davis
+    - name: Dr. Juan Villacrés
+      role: PhD 2022 · Assistant Professor, Escuela Politécnica Nacional, Quito; former postdoc, UC Davis
+    - name: Dr. Tito Arévalo
+      role: PhD 2022 · Assistant Professor, Pontificia Universidad Católica de Chile
+    - name: Dr. Robert Guamán
+      role: PhD 2022 · Assistant Professor, Universidad Católica del Norte, Chile
+    - name: Dr. Leonardo Guevara
+      role: PhD 2021 · Assistant Professor, University of Lincoln, UK
+    - name: Dr. Darío Guevara
+      role: PhD 2021 · Postdoc, UC Davis, and entrepreneur
+    - name: Dr. Juan Pablo Vásconez
+      role: PhD 2020 · Associate Professor, Universidad Andrés Bello, Chile
+    - name: Dr. Francisco Yandún
+      role: PhD 2019 · Researcher, Carnegie Mellon University, USA
+    - name: Dr. Oswaldo Menéndez
+      role: PhD 2019 · Assistant Professor, Universidad Católica del Norte, Chile
+    - name: Dr. Álvaro Javier Prado
+      role: PhD 2019 · Associate Professor, Universidad Católica del Norte, Chile
