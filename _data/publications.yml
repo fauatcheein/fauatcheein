@@ -15,11 +15,11 @@
   year: 2026
   doi: "10.1109/TII.2025.3609176"
 
-- title: "Consistent lidar-only SLAM for legged agricultural robots in arboreal environments via robust dimensionality reduction"
-  authors: "Nazate-Burgos, P., Torres-Torriti, M., Huang, S., Auat Cheein, F."
-  venue: "Computers and Electronics in Agriculture, 247"
+- title: "Consistent lidar-only SLAM for legged agricultural robots in arboreal environments via robust point cloud registration"
+  authors: "Jiang, H., Jiang, L., He, L., et al., Auat Cheein, F."
+  venue: "Computers and Electronics in Agriculture, 111687"
   year: 2026
-  url: "https://hau.repository.guildhe.ac.uk/id/eprint/18359/"
+  doi: "10.1016/j.compag.2026.111687"
 
 - title: "Multimodal data fusion and attention-based deep learning for estimating winter wheat chlorophyll"
   authors: "Zhang, Y. et al., Auat Cheein, F."
