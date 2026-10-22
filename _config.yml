@@ -49,3 +49,9 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor
+
+# Preview image shown when the site is shared on LinkedIn, X, etc.
+defaults:
+  - scope: { path: "" }
+    values:
+      image: /assets/img/share.jpg

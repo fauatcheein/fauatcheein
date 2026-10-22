@@ -2,9 +2,16 @@
 layout: default
 ---
 <article class="page">
-  <header class="page-head">
-    <h1 class="page-title">{{ page.title }}</h1>
-    {% if page.intro %}<p class="lead">{{ page.intro }}</p>{% endif %}
+  <header class="page-head{% if page.hero_image %} with-image{% endif %}">
+    <div>
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% if page.intro %}<p class="lead">{{ page.intro }}</p>{% endif %}
+    </div>
+    {% if page.hero_image %}
+    <figure class="page-image">
+      <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}" width="812" height="1087">
+    </figure>
+    {% endif %}
   </header>
   <div class="prose">
 {{ content }}

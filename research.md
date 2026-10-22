@@ -2,6 +2,8 @@
 layout: page
 title: Research
 permalink: /research/
+hero_image: /assets/img/robot-apple.jpg
+hero_alt: A robotic hand holding a red apple in an orchard
 intro: The Harper Institute of Technology is built around three pillars. Most of our work sits where they meet — robots that perceive, decide and can be shown to be safe in real fields.
 ---
 <div class="cards">

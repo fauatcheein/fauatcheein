@@ -258,3 +258,12 @@ ul.plain ul { margin-top: .4em; }
 }
 .prose > .cv-list, .prose > .pubs, .prose > ul.plain { max-width: 900px; }
 .grants td:nth-child(2), .grants td:nth-child(3) { white-space: nowrap; }
+
+/* page header with an image (e.g. Research) */
+.page-head.with-image { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 48px; align-items: end; }
+.page-image { margin: 0; }
+.page-image img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 35%; border-radius: 3px; border-bottom: 4px solid var(--signal); }
+@media (max-width: 760px) {
+  .page-head.with-image { grid-template-columns: 1fr; gap: 24px; }
+}
+.prose .card h3 { margin: 0 0 .5em; }
