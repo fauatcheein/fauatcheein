@@ -2,7 +2,7 @@
 layout: page
 title: Team
 permalink: /team/
-intro: Researchers working with the group across Harper Adams University, Heriot-Watt University, UTFSM (Chile) and STIIMA (Italy). To date the group has graduated 12 PhDs and supervised 30+ MSc, 10+ MEng and 40+ Bachelor theses.
+intro: Researchers working with the group across Harper Adams University, Heriot-Watt University and UTFSM (Chile). To date the group has graduated 12 PhDs and supervised 30+ MSc, 10+ MEng and 40+ Bachelor theses.
 ---
 {% for group in site.data.team %}
 <h2>{{ group.group }}</h2>
