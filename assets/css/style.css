@@ -10,6 +10,9 @@
   --agri:    #2A8C72;   /* secondary: agri-tech teal (research pillars, motif) */
   --row:     #C9D6E4;   /* crop-row pattern */
   --signal:  #F2A900;   /* industrial amber, used sparingly */
+  --health:  #B0386A;   /* health and assistive technologies */
+  --industry:#8A6516;   /* industry, construction and energy */
+  --cross:   #55667A;   /* across all areas */
   --surface: #FFFFFF;
 
   --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
@@ -27,6 +30,9 @@
     --agri:    #5CC4A6;
     --row:     #22344C;
     --signal:  #F5B82E;
+    --health:  #EE86AE;
+    --industry:#D9B061;
+    --cross:   #9AAABD;
     --surface: #132033;
   }
 }
@@ -287,3 +293,31 @@ ul.plain ul { margin-top: .4em; }
 /* profile links under a team member */
 .person .person-links { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 6px; }
 .person-links a { font-family: var(--display); font-weight: 500; font-size: .85rem; }
+
+/* ------------------------------------------------------------------ research areas (colour-coded) */
+.area-agri     { --area: var(--agri); }
+.area-health   { --area: var(--health); }
+.area-industry { --area: var(--industry); }
+.area-cross    { --area: var(--cross); }
+.area-name { display: block; font-family: var(--display); font-weight: 700; font-size: .82rem; color: var(--area); margin: 0 0 6px; }
+
+.topic-filter { display: block; margin: 0 0 16px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--rule); border-radius: 3px; }
+.filter-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.filter-area { margin-top: 12px; padding-left: 12px; border-left: 3px solid var(--area); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-area .chip { border-color: color-mix(in srgb, var(--area) 35%, var(--rule)); }
+.filter-area .chip:hover { border-color: var(--area); color: var(--area); }
+.filter-area .chip[aria-pressed="true"] { background: var(--area); border-color: var(--area); color: #fff; }
+.chip .count { font-weight: 500; opacity: .65; margin-left: 2px; font-variant-numeric: tabular-nums; }
+
+.tag-area { margin-bottom: 14px; }
+.tag-area .tags { margin-bottom: 0; }
+.tag-area .tags li { border-left-color: var(--area); }
+.tag-area .tags a:hover { color: var(--area); }
+
+.area-panel { margin: 28px 0; padding: 20px 22px; border-left: 4px solid var(--area); background: color-mix(in srgb, var(--area) 7%, var(--surface)); border-radius: 0 3px 3px 0; max-width: 900px; }
+.area-panel h2 { margin-top: 0; color: var(--area); }
+.area-panel p:last-child, .area-panel ul:last-child { margin-bottom: 0; }
+.area-panel .topic-links a { font-family: var(--display); font-weight: 600; font-size: .92rem; color: var(--area); margin-right: 16px; }
+.chip { border-radius: 16px; }
+.filter-status[class*="area-"] { border-left-color: var(--area); }

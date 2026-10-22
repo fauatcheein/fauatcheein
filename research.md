@@ -24,6 +24,23 @@ intro: The Harper Institute of Technology is built around three pillars. Most of
   </div>
 </div>
 
+<section class="area-panel area-health">
+<h2>Health and assistive technologies</h2>
+<p>The same perception, machine-learning and robotics methods we use in the field also support clinicians and people with disabilities.</p>
+<ul>
+<li><strong>AI-assisted diagnosis.</strong> Computer-aided diagnosis of middle and external ear conditions from otoscopy images and video (<em>PLOS ONE</em> 2020, <em>IEEE Access</em> 2021, <em>Diagnostics</em> 2022), protected by an international patent application. Related work covers colonoscopy polyp detection, and three IEEE Chile national innovation awards (2019–2021) recognised systems for AI-assisted medical diagnosis, otorhinolaryngology training and emotion detection in online meetings.</li>
+<li><strong>Brain-computer interfaces and assistive robotics.</strong> EEG- and EMG-based interfaces for robot control, SLAM-based navigation for robotic wheelchairs, and sound-based systems for visually impaired people, including electronic football training for visually impaired athletes.</li>
+<li><strong>Technology transfer.</strong> Co-founder of <a href="https://www.simbiotica.ai">Simbiotica</a>, which develops AI devices for rapid medical diagnosis.</li>
+</ul>
+<p class="topic-links"><a href="{{ '/publications/' | relative_url }}?topic=diagnosis">Medical diagnosis papers</a><a href="{{ '/publications/' | relative_url }}?topic=assistive">Assistive robotics papers</a></p>
+</section>
+
+<section class="area-panel area-industry">
+<h2>Industry, construction and energy</h2>
+<p>We also apply robotics and AI beyond agriculture: robotic cells for on-site 3D printing of buildings (several patents), vision for construction automation, control of autonomous mining vehicles, reinforcement learning for power electronics, and road-condition assessment from vision and LiDAR.</p>
+<p class="topic-links"><a href="{{ '/publications/' | relative_url }}?topic=construction">Construction papers</a><a href="{{ '/publications/' | relative_url }}?topic=infrastructure">Mining, energy and infrastructure papers</a></p>
+</section>
+
 ## Safety and certification
 
 A recurring thread in our work is how to *certify* autonomous agricultural machines. We develop methods aligned with ISO 18497 and ISO 25119, including simulation-based (Monte Carlo) evidence generation, so that new robots can move from research prototypes to safe deployment on farms.

@@ -7,9 +7,16 @@ permalink: /publications/
 {% if site.links.scholar %}<a href="{{ site.links.scholar }}">Google Scholar</a>{% endif %}{% if site.links.orcid %} and <a href="{{ site.links.orcid }}">ORCID</a>{% endif %}.</p>
 
 <div class="topic-filter" role="group" aria-label="Filter by research topic">
-  <span class="meta">Filter by topic</span>
-  <a class="chip" href="{{ '/publications/' | relative_url }}" data-topic="" aria-pressed="true">All</a>
-  {% for t in site.data.topics %}<a class="chip" href="{{ '/publications/' | relative_url }}?topic={{ t.slug }}" data-topic="{{ t.slug }}" aria-pressed="false">{{ t.label }}</a>
+  <div class="filter-head"><span class="meta">Filter by topic</span>
+  <a class="chip chip-all" href="{{ '/publications/' | relative_url }}" data-topic="" aria-pressed="true">All publications</a></div>
+  {% for area in site.data.topics %}
+  <div class="filter-area area-{{ area.key }}">
+    <span class="area-name">{{ area.area }}</span>
+    <div class="chips">
+    {% for t in area.topics %}{% assign n = site.data.publications | where_exp: "p", "p.topics contains t.slug" | size %}{% if n > 0 %}<a class="chip" href="{{ '/publications/' | relative_url }}?topic={{ t.slug }}" data-topic="{{ t.slug }}" aria-pressed="false">{{ t.label }} <span class="count">{{ n }}</span></a>
+    {% endif %}{% endfor %}
+    </div>
+  </div>
   {% endfor %}
 </div>
 <p class="filter-status" aria-live="polite" hidden></p>
@@ -80,7 +87,7 @@ permalink: /publications/
   var chips = document.querySelectorAll('.topic-filter .chip');
   var status = document.querySelector('.filter-status');
   var labels = {};
-  chips.forEach(function (c) { labels[c.dataset.topic] = c.textContent; });
+  chips.forEach(function (c) { labels[c.dataset.topic] = c.firstChild.textContent.trim(); });
 
   function apply(topic) {
     var count = 0;
@@ -101,6 +108,9 @@ permalink: /publications/
     chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.topic === (topic || ''))); });
     if (topic) {
       status.hidden = false;
+      var active = document.querySelector('.chip[data-topic="' + topic + '"]');
+      var area = active && active.closest('.filter-area');
+      status.className = 'filter-status ' + (area ? Array.from(area.classList).filter(function (c) { return c.indexOf('area-') === 0; }).join(' ') : '');
       status.innerHTML = count
         ? count + (count === 1 ? ' selected publication' : ' selected publications') + ' on <strong>' + labels[topic] + '</strong>. For the complete record, see <a href="{{ site.links.scholar }}">Google Scholar</a>.'
         : 'No papers on <strong>' + labels[topic] + '</strong> are in this selected list yet. See the full record on <a href="{{ site.links.scholar }}">Google Scholar</a>.';

@@ -1,16 +1,47 @@
-# Research topics. "slug" is used in links and in the "topics" list of each paper
-# in publications.yml. Change "label" to rename a topic everywhere on the site.
-- slug: agri-robotics
-  label: Agricultural robotics
-- slug: ai
-  label: AI / ML perception
-- slug: autonomy
-  label: Autonomous systems
-- slug: lidar
-  label: LiDAR and SLAM
-- slug: spectral
-  label: Hyperspectral & multispectral sensing
-- slug: digital-twins
-  label: Digital twins
-- slug: safety
-  label: Safety certification (ISO 18497, ISO 25119)
+# Research topics, grouped by application area. Each area has its own colour on the site.
+# "slug" is used in links (/publications/?topic=slug) and in the "topics" list of each
+# paper in publications.yml. Change "label" to rename a topic everywhere on the site.
+
+- area: Agriculture and food
+  key: agri
+  topics:
+    - slug: harvest
+      label: Harvesting and manipulation robots
+    - slug: navigation
+      label: Vehicle navigation and control
+    - slug: lidar
+      label: LiDAR, SLAM and point clouds
+    - slug: plant-sensing
+      label: Plant sensing and phenotyping
+    - slug: food
+      label: Food quality and postharvest
+    - slug: pests
+      label: Pests and diseases
+    - slug: environment
+      label: Environmental monitoring
+    - slug: safety
+      label: Safety and certification (ISO 18497, ISO 25119)
+    - slug: digital-twins
+      label: Digital twins
+
+- area: Health and assistive technologies
+  key: health
+  topics:
+    - slug: diagnosis
+      label: AI-assisted medical diagnosis
+    - slug: assistive
+      label: Brain-computer interfaces and assistive robotics
+
+- area: Industry, construction and energy
+  key: industry
+  topics:
+    - slug: construction
+      label: Construction robotics and 3D printing
+    - slug: infrastructure
+      label: Mining, energy and infrastructure
+
+- area: Across all areas
+  key: cross
+  topics:
+    - slug: datasets
+      label: Open datasets
