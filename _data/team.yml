@@ -24,8 +24,6 @@
       role: PhD researcher, Heriot-Watt University
     - name: Abhiram Karukayil
       role: PhD researcher, Heriot-Watt University
-    - name: Sebastian Estrada
-      role: PhD researcher, UTFSM, Chile
 
 - group: Former postdoctoral researchers
   members:
@@ -38,6 +36,8 @@
 
 - group: PhD graduates
   members:
+    - name: Dr. Sebastian Estrada
+      role: PhD 2026 · Universidad Técnica Federico Santa María, Chile
     - name: Dr. Franco Jorquera
       role: PhD 2025 · Assistant Professor, Universidad Técnica Federico Santa María, Chile
     - name: Dr. Michelle Viscaíno

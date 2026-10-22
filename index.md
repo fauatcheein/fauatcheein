@@ -21,7 +21,7 @@ title: About
   <div><strong>200+</strong><span>peer-reviewed papers</span></div>
   <div><strong>4,200+</strong><span>citations</span></div>
   <div><strong>£14M+</strong><span>external research funding</span></div>
-  <div><strong>12</strong><span>PhD graduates</span></div>
+  <div><strong>13</strong><span>PhD graduates</span></div>
   <div><strong>Top 2%</strong><span>Stanford/Elsevier scientists, 2023–2026</span></div>
 </section>
 
