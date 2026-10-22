@@ -283,3 +283,7 @@ ul.plain ul { margin-top: .4em; }
 .chip[aria-pressed="true"] { background: var(--field); border-color: var(--field); color: var(--paper); }
 .filter-status { font-size: 1.05rem; margin: 4px 0 8px; padding: 10px 14px; border-left: 3px solid var(--agri); background: var(--surface); max-width: 80ch; }
 [hidden] { display: none !important; }
+
+/* profile links under a team member */
+.person .person-links { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 6px; }
+.person-links a { font-family: var(--display); font-weight: 500; font-size: .85rem; }

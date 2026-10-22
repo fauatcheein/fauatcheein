@@ -1,4 +1,5 @@
-# Team — groups appear in this order. Fields per person: name, role (required); topic, url (optional).
+# Team — groups appear in this order. Fields per person: name, role (required);
+# optional: topic, url, email, linkedin, scholar, researchgate, orcid.
 # To add someone, copy a "- name:" block under the right group.
 
 - group: Group lead
@@ -16,6 +17,10 @@
   members:
     - name: Sebastian Vega
       role: PhD researcher, Harper Adams University
+      email: SVega@live.harper.ac.uk
+      linkedin: "https://www.linkedin.com/in/sebastian-vega-968577260/"
+      scholar: "https://scholar.google.com/citations?user=Kx-RDZ4AAAAJ&hl=en"
+      researchgate: "https://www.researchgate.net/profile/Sebastian-Vega-10"
     - name: Juan Vargas
       role: PhD researcher, Harper Adams University
     - name: Ciaran Johnson
