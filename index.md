@@ -13,7 +13,7 @@ title: About
     </p>
   </div>
   <figure class="portrait">
-    <img src="{{ '/assets/img/profile.svg' | relative_url }}" alt="Portrait of {{ site.author.name }}">
+    <img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Portrait of {{ site.author.name }}" width="400" height="400">
   </figure>
 </section>
 

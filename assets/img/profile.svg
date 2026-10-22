@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Placeholder portrait">
-  <rect width="400" height="500" fill="#E4ECE5"/>
-  <circle cx="200" cy="190" r="78" fill="#B9CBBC"/>
-  <path d="M60 500c0-90 63-150 140-150s140 60 140 150z" fill="#B9CBBC"/>
-  <text x="200" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#586A5E">Replace with assets/img/profile.jpg</text>
-</svg>
