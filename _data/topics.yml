@@ -1,0 +1,16 @@
+# Research topics. "slug" is used in links and in the "topics" list of each paper
+# in publications.yml. Change "label" to rename a topic everywhere on the site.
+- slug: agri-robotics
+  label: Agricultural robotics
+- slug: ai
+  label: AI / ML perception
+- slug: autonomy
+  label: Autonomous systems
+- slug: lidar
+  label: LiDAR and SLAM
+- slug: spectral
+  label: Hyperspectral & multispectral sensing
+- slug: digital-twins
+  label: Digital twins
+- slug: safety
+  label: Safety certification (ISO 18497, ISO 25119)

@@ -267,3 +267,19 @@ ul.plain ul { margin-top: .4em; }
   .page-head.with-image { grid-template-columns: 1fr; gap: 24px; }
 }
 .prose .card h3 { margin: 0 0 .5em; }
+
+/* clickable research interests and publication topic filter */
+.tags li { padding: 0; }
+.tags a { display: block; padding: .35em .75em; color: var(--ink); text-decoration: none; }
+.tags a:hover { color: var(--field); background: var(--paper); }
+.topic-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 12px; }
+.topic-filter .meta { margin-right: 4px; }
+.chip {
+  font-family: var(--display); font-weight: 500; font-size: .85rem; text-decoration: none;
+  color: var(--ink); background: var(--surface); border: 1px solid var(--rule);
+  border-radius: 999px; padding: .35em .85em;
+}
+.chip:hover { border-color: var(--field); color: var(--field); }
+.chip[aria-pressed="true"] { background: var(--field); border-color: var(--field); color: var(--paper); }
+.filter-status { font-size: 1.05rem; margin: 4px 0 8px; padding: 10px 14px; border-left: 3px solid var(--agri); background: var(--surface); max-width: 80ch; }
+[hidden] { display: none !important; }

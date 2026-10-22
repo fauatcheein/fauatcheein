@@ -36,14 +36,10 @@ title: About
   </div>
   <div>
     <h2>Research interests</h2>
+    <p class="meta">Select a topic to see related publications.</p>
     <ul class="tags">
-      <li>Agricultural robotics</li>
-      <li>AI / ML perception</li>
-      <li>Autonomous systems</li>
-      <li>LiDAR-based SLAM</li>
-      <li>Hyperspectral &amp; multispectral sensing</li>
-      <li>Digital twins</li>
-      <li>Safety certification (ISO 18497, ISO 25119)</li>
+      {% for t in site.data.topics %}<li><a href="{{ '/publications/' | relative_url }}?topic={{ t.slug }}">{{ t.label }}</a></li>
+      {% endfor %}
     </ul>
     <h2>Latest news</h2>
     <ul class="news-list">

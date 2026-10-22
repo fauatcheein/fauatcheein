@@ -1,4 +1,4 @@
-{% assign p = include.p %}<li>
+{% assign p = include.p %}<li data-topics="{{ p.topics | join: ' ' }}">
     <span class="pub-title">{% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% elsif p.doi %}<a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</span>
     <span class="pub-authors">{{ p.authors }}</span>
     <span class="pub-venue"><em>{{ p.venue }}</em>{% if p.type == "conference" %} · {{ p.year }}{% endif %}{% if p.note %} · {{ p.note }}{% endif %}</span>

@@ -6,6 +6,14 @@ permalink: /publications/
 <p class="lead">179 articles in Web of Science-indexed journals since 2007, plus books, book chapters, conference papers and patents. 4,200+ citations; h-index 36 (Scopus) and 42 (Google Scholar). The complete record is on
 {% if site.links.scholar %}<a href="{{ site.links.scholar }}">Google Scholar</a>{% endif %}{% if site.links.orcid %} and <a href="{{ site.links.orcid }}">ORCID</a>{% endif %}.</p>
 
+<div class="topic-filter" role="group" aria-label="Filter by research topic">
+  <span class="meta">Filter by topic</span>
+  <a class="chip" href="{{ '/publications/' | relative_url }}" data-topic="" aria-pressed="true">All</a>
+  {% for t in site.data.topics %}<a class="chip" href="{{ '/publications/' | relative_url }}?topic={{ t.slug }}" data-topic="{{ t.slug }}" aria-pressed="false">{{ t.label }}</a>
+  {% endfor %}
+</div>
+<p class="filter-status" aria-live="polite" hidden></p>
+
 <nav class="jump" aria-label="On this page">
   <a href="#journal">Journal articles</a>
   <a href="#conference">Conference papers</a>
@@ -29,8 +37,9 @@ permalink: /publications/
 <ol class="pubs">
   {% for p in confs %}{% include pub.html p=p %}{% endfor %}
 </ol>
-<p class="more">Plus 31 further international conference papers and 11 national congress papers (Argentina and Chile, 2005–2010).</p>
+<p class="more untagged">Plus 31 further international conference papers and 11 national congress papers (Argentina and Chile, 2005–2010).</p>
 
+<div class="untagged">
 <h2 id="books" class="section-title">Books and edited volumes</h2>
 <ol class="pubs">
   <li><span class="pub-title"><a href="https://link.springer.com/book/10.1007/978-3-319-40003-7">Rapid Roboting</a></span><span class="pub-venue"><em>Springer</em>, 2022 · Editor</span></li>
@@ -64,3 +73,52 @@ permalink: /publications/
   <li><span class="pub-title">Una celda robotizada móvil para la fabricación de piezas y recintos impresos en obra mediante un sistema multi-eje de impresión 3D</span><span class="pub-authors">González, L.F., García, R., Quitral, F., Martínez, A., Auat Cheein, F.</span><span class="pub-venue">PCT/CL2019/050130, 2019</span></li>
 </ol>
 <p class="more"><strong>Full list of patent publications:</strong> US 2023/0274528 A1, CO 2023000696 A2, MX 2023000716 A, WO 2022/013599 A1, WO 2023/056571 A1, CL 2023000124 A1, EP 3272478 B1, US 2018/0050460 A1, EP 3272478 A1, US 10464229 B2, EP 3272478 A4, CL 2015000697 A1, CL 2015000674 A1, WO 2016/145544 A1, WO 2016/145545 A1, WO 2021/108934 A1, US 12158015 B2, WO 2021/108935 A1, WO 2021/108933 A1, WO 2021/108936 A1, CL 2022001433 A1, CL 2022001435 A1, US 2023/0016498 A1, CL 2022001436 A1.</p>
+</div>
+
+<script>
+(function () {
+  var chips = document.querySelectorAll('.topic-filter .chip');
+  var status = document.querySelector('.filter-status');
+  var labels = {};
+  chips.forEach(function (c) { labels[c.dataset.topic] = c.textContent; });
+
+  function apply(topic) {
+    var count = 0;
+    document.querySelectorAll('.pubs li[data-topics]').forEach(function (li) {
+      var show = !topic || (' ' + li.dataset.topics + ' ').indexOf(' ' + topic + ' ') > -1;
+      li.hidden = !show; if (show) count++;
+    });
+    // hide year headings and lists that end up empty
+    document.querySelectorAll('ol.pubs').forEach(function (ol) {
+      var tagged = ol.querySelectorAll('li[data-topics]');
+      if (!tagged.length) return;
+      var visible = ol.querySelectorAll('li[data-topics]:not([hidden])').length;
+      ol.hidden = visible === 0;
+      var prev = ol.previousElementSibling;
+      if (prev && /^H[23]$/.test(prev.tagName)) prev.hidden = visible === 0;
+    });
+    document.querySelectorAll('.untagged, .jump').forEach(function (el) { el.hidden = !!topic; });
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.topic === (topic || ''))); });
+    if (topic) {
+      status.hidden = false;
+      status.innerHTML = count
+        ? count + (count === 1 ? ' selected publication' : ' selected publications') + ' on <strong>' + labels[topic] + '</strong>. For the complete record, see <a href="{{ site.links.scholar }}">Google Scholar</a>.'
+        : 'No papers on <strong>' + labels[topic] + '</strong> are in this selected list yet. See the full record on <a href="{{ site.links.scholar }}">Google Scholar</a>.';
+    } else { status.hidden = true; }
+  }
+
+  chips.forEach(function (c) {
+    c.addEventListener('click', function (e) {
+      e.preventDefault();
+      var topic = c.dataset.topic;
+      var url = new URL(window.location.href);
+      if (topic) url.searchParams.set('topic', topic); else url.searchParams.delete('topic');
+      history.replaceState(null, '', url);
+      apply(topic);
+    });
+  });
+
+  var initial = new URLSearchParams(window.location.search).get('topic');
+  apply(labels.hasOwnProperty(initial) ? initial : '');
+})();
+</script>
