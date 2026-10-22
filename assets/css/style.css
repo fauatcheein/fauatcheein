@@ -2,13 +2,14 @@
    Colours and fonts. Change these to restyle the whole site.
    ------------------------------------------------------------------ */
 :root {
-  --paper:   #F5F7F3;   /* page background, pale field green-white */
-  --ink:     #17251C;   /* text */
-  --muted:   #586A5E;   /* secondary text */
-  --rule:    #D3DCD4;   /* thin lines */
-  --field:   #2D6A3E;   /* links, headings accents */
-  --row:     #C5D6C7;   /* crop-row pattern */
-  --signal:  #E2B007;   /* safety yellow, used sparingly */
+  --paper:   #F6F8FB;   /* page background, cool white */
+  --ink:     #0F1E2E;   /* text, deep navy */
+  --muted:   #55667A;   /* secondary text */
+  --rule:    #D6DEE8;   /* thin lines */
+  --field:   #1D4E89;   /* primary: engineering blue (links, buttons, figures) */
+  --agri:    #2A8C72;   /* secondary: agri-tech teal (research pillars, motif) */
+  --row:     #C9D6E4;   /* crop-row pattern */
+  --signal:  #F2A900;   /* industrial amber, used sparingly */
   --surface: #FFFFFF;
 
   --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
@@ -18,14 +19,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper:   #121A15;
-    --ink:     #E6ECE6;
-    --muted:   #9DB0A2;
-    --rule:    #2B3A30;
-    --field:   #7CC48E;
-    --row:     #24382A;
-    --signal:  #F0C232;
-    --surface: #18231C;
+    --paper:   #0D1520;
+    --ink:     #E6ECF3;
+    --muted:   #9AAABD;
+    --rule:    #24344A;
+    --field:   #7DB3EA;
+    --agri:    #5CC4A6;
+    --row:     #22344C;
+    --signal:  #F5B82E;
+    --surface: #132033;
   }
 }
 
@@ -144,6 +146,8 @@ main { padding-bottom: 72px; }
   padding: .35em .75em; border: 1px solid var(--rule); border-radius: 3px; background: var(--surface);
 }
 
+.tags li { border-left: 3px solid var(--agri); }
+
 .news-list { list-style: none; padding: 0; }
 .news-list li { padding: .55em 0; border-bottom: 1px solid var(--rule); line-height: 1.4; }
 .news-list .meta { display: block; margin-bottom: 2px; }
@@ -163,7 +167,7 @@ main { padding-bottom: 72px; }
 
 /* research pillars */
 .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-bottom: 24px; }
-.card { border-top: 3px solid var(--field); padding-top: 16px; }
+.card { border-top: 3px solid var(--agri); padding-top: 16px; }
 .card h3 { margin: 0 0 .5em; font-size: 1.35rem; }
 .card .eyebrow { margin-bottom: .3em; }
 .card p:last-child { margin-bottom: 0; }
