@@ -56,6 +56,7 @@
 
 - area: Health and assistive technologies
   key: health
+  current: false   # earlier research line: kept in publication filters, hidden from home-page interests
   topics:
     - slug: diagnosis
       label: AI-assisted medical diagnosis
@@ -64,6 +65,7 @@
 
 - area: Industry, construction and energy
   key: industry
+  current: false   # earlier research line: kept in publication filters, hidden from home-page interests
   topics:
     - slug: construction
       label: Construction robotics and 3D printing

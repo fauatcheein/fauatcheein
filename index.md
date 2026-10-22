@@ -38,8 +38,8 @@ title: About
     <h2>Research interests</h2>
     <p class="meta">Select a topic to see related publications.</p>
     <div class="topic-chips">
-      {% for area in site.data.topics %}{% for t in area.topics %}{% assign n = site.data.publications | where_exp: "p", "p.topics contains t.slug" | size %}{% if n > 0 %}<a class="chip area-{{ area.key }}" href="{{ '/publications/' | relative_url }}?topic={{ t.slug }}" title="{{ area.area }}">{{ t.label }}</a>
-      {% endif %}{% endfor %}{% endfor %}
+      {% for area in site.data.topics %}{% if area.current != false %}{% for t in area.topics %}{% assign n = site.data.publications | where_exp: "p", "p.topics contains t.slug" | size %}{% if n > 0 %}<a class="chip area-{{ area.key }}" href="{{ '/publications/' | relative_url }}?topic={{ t.slug }}" title="{{ area.area }}">{{ t.label }}</a>
+      {% endif %}{% endfor %}{% endif %}{% endfor %}
     </div>
     <h2>Latest news</h2>
     <ul class="news-list">
