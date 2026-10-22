@@ -10,9 +10,14 @@
   --agri:    #2A8C72;   /* secondary: agri-tech teal (research pillars, motif) */
   --row:     #C9D6E4;   /* crop-row pattern */
   --signal:  #F2A900;   /* industrial amber, used sparingly */
-  --health:  #B0386A;   /* health and assistive technologies */
-  --industry:#8A6516;   /* industry, construction and energy */
-  --cross:   #55667A;   /* across all areas */
+  /* research-area colours: one muted family, distinct in hue */
+  --robotics:   #1F4E8C;  /* deep blue */
+  --perception: #5B4A9E;  /* muted indigo */
+  --remote:     #0E7187;  /* ocean cyan */
+  --agrifood:   #3B7A3A;  /* leaf green */
+  --health:     #AE3A69;  /* rose */
+  --industry:   #8E6418;  /* ochre */
+  --cross:      #55667A;  /* slate */
   --surface: #FFFFFF;
 
   --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
@@ -30,9 +35,13 @@
     --agri:    #5CC4A6;
     --row:     #22344C;
     --signal:  #F5B82E;
-    --health:  #EE86AE;
-    --industry:#D9B061;
-    --cross:   #9AAABD;
+    --robotics:   #86B4EC;
+    --perception: #B2A6EA;
+    --remote:     #6CC9DA;
+    --agrifood:   #8FCB86;
+    --health:     #EE8DB3;
+    --industry:   #DDB566;
+    --cross:      #A3B1C2;
     --surface: #132033;
   }
 }
@@ -295,25 +304,30 @@ ul.plain ul { margin-top: .4em; }
 .person-links a { font-family: var(--display); font-weight: 500; font-size: .85rem; }
 
 /* ------------------------------------------------------------------ research areas (colour-coded) */
-.area-agri     { --area: var(--agri); }
-.area-health   { --area: var(--health); }
-.area-industry { --area: var(--industry); }
-.area-cross    { --area: var(--cross); }
-.area-name { display: block; font-family: var(--display); font-weight: 700; font-size: .82rem; color: var(--area); margin: 0 0 6px; }
+.area-robotics   { --area: var(--robotics); }
+.area-perception { --area: var(--perception); }
+.area-remote     { --area: var(--remote); }
+.area-agri       { --area: var(--agrifood); }
+.area-health     { --area: var(--health); }
+.area-industry   { --area: var(--industry); }
+.area-cross      { --area: var(--cross); }
 
-.topic-filter { display: block; margin: 0 0 16px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--rule); border-radius: 3px; }
-.filter-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-.filter-area { margin-top: 12px; padding-left: 12px; border-left: 3px solid var(--area); }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.filter-area .chip { border-color: color-mix(in srgb, var(--area) 35%, var(--rule)); }
-.filter-area .chip:hover { border-color: var(--area); color: var(--area); }
-.filter-area .chip[aria-pressed="true"] { background: var(--area); border-color: var(--area); color: #fff; }
-.chip .count { font-weight: 500; opacity: .65; margin-left: 2px; font-variant-numeric: tabular-nums; }
-
-.tag-area { margin-bottom: 14px; }
-.tag-area .tags { margin-bottom: 0; }
-.tag-area .tags li { border-left-color: var(--area); }
-.tag-area .tags a:hover { color: var(--area); }
+.topic-filter, .topic-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.topic-filter { margin: 0 0 16px; }
+.topic-chips { margin: 0 0 8px; }
+.chip[class*="area-"] {
+  color: color-mix(in srgb, var(--area) 82%, var(--ink));
+  background: color-mix(in srgb, var(--area) 9%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--area) 28%, var(--surface));
+}
+.chip[class*="area-"]:hover { border-color: var(--area); color: var(--area); background: color-mix(in srgb, var(--area) 14%, var(--surface)); }
+.chip[class*="area-"][aria-pressed="true"] { background: var(--area); border-color: var(--area); color: #fff; }
+.chip[class*="area-"][aria-pressed="true"] .count { opacity: .8; }
+.chip .count { font-weight: 500; opacity: .6; margin-left: 2px; font-variant-numeric: tabular-nums; }
+@media (prefers-color-scheme: dark) {
+  .chip[class*="area-"] { color: var(--area); background: color-mix(in srgb, var(--area) 12%, var(--surface)); border-color: color-mix(in srgb, var(--area) 35%, var(--surface)); }
+  .chip[class*="area-"][aria-pressed="true"] { color: var(--paper); }
+}
 
 .area-panel { margin: 28px 0; padding: 20px 22px; border-left: 4px solid var(--area); background: color-mix(in srgb, var(--area) 7%, var(--surface)); border-radius: 0 3px 3px 0; max-width: 900px; }
 .area-panel h2 { margin-top: 0; color: var(--area); }
@@ -321,3 +335,4 @@ ul.plain ul { margin-top: .4em; }
 .area-panel .topic-links a { font-family: var(--display); font-weight: 600; font-size: .92rem; color: var(--area); margin-right: 16px; }
 .chip { border-radius: 16px; }
 .filter-status[class*="area-"] { border-left-color: var(--area); }
+.chip-all[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }

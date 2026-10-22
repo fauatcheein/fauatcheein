@@ -37,15 +37,10 @@ title: About
   <div>
     <h2>Research interests</h2>
     <p class="meta">Select a topic to see related publications.</p>
-    {% for area in site.data.topics %}{% if area.key != "cross" %}
-    <div class="tag-area area-{{ area.key }}">
-      <span class="area-name">{{ area.area }}</span>
-      <ul class="tags">
-        {% for t in area.topics %}{% assign n = site.data.publications | where_exp: "p", "p.topics contains t.slug" | size %}{% if n > 0 %}<li><a href="{{ '/publications/' | relative_url }}?topic={{ t.slug }}">{{ t.label }}</a></li>
-        {% endif %}{% endfor %}
-      </ul>
+    <div class="topic-chips">
+      {% for area in site.data.topics %}{% for t in area.topics %}{% assign n = site.data.publications | where_exp: "p", "p.topics contains t.slug" | size %}{% if n > 0 %}<a class="chip area-{{ area.key }}" href="{{ '/publications/' | relative_url }}?topic={{ t.slug }}" title="{{ area.area }}">{{ t.label }}</a>
+      {% endif %}{% endfor %}{% endfor %}
     </div>
-    {% endif %}{% endfor %}
     <h2>Latest news</h2>
     <ul class="news-list">
       {% for post in site.posts limit:3 %}

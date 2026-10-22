@@ -1,24 +1,54 @@
-# Research topics, grouped by application area. Each area has its own colour on the site.
+# Research topics. Each topic belongs to an area; the area sets the button colour
+# (colours are defined in assets/css/style.css as .area-<key>). Area names are not
+# shown as headings, only as a tooltip on each button.
 # "slug" is used in links (/publications/?topic=slug) and in the "topics" list of each
 # paper in publications.yml. Change "label" to rename a topic everywhere on the site.
+
+- area: Robotics and autonomy
+  key: robotics
+  topics:
+    - slug: field-robots
+      label: Field and agricultural robots
+    - slug: navigation
+      label: Navigation, path planning and control
+    - slug: legged
+      label: Legged robots
+    - slug: manipulation
+      label: Manipulation and harvesting
+    - slug: hri
+      label: Human-robot interaction
+
+- area: Perception and AI
+  key: perception
+  topics:
+    - slug: vision
+      label: Computer vision and deep learning
+    - slug: lidar
+      label: LiDAR, SLAM and point clouds
+    - slug: estimation
+      label: State estimation and sensor fusion
+    - slug: responsible-ai
+      label: Explainable and responsible AI
+
+- area: Remote sensing
+  key: remote
+  topics:
+    - slug: spectral
+      label: Hyperspectral and multispectral imaging
+    - slug: uav-satellite
+      label: UAV and satellite imagery
+    - slug: environment
+      label: Environmental and biodiversity monitoring
 
 - area: Agriculture and food
   key: agri
   topics:
-    - slug: harvest
-      label: Harvesting and manipulation robots
-    - slug: navigation
-      label: Vehicle navigation and control
-    - slug: lidar
-      label: LiDAR, SLAM and point clouds
-    - slug: plant-sensing
-      label: Plant sensing and phenotyping
+    - slug: phenotyping
+      label: Plant phenotyping and crop monitoring
     - slug: food
       label: Food quality and postharvest
     - slug: pests
       label: Pests and diseases
-    - slug: environment
-      label: Environmental monitoring
     - slug: safety
       label: Safety and certification (ISO 18497, ISO 25119)
     - slug: digital-twins
@@ -40,7 +70,7 @@
     - slug: infrastructure
       label: Mining, energy and infrastructure
 
-- area: Across all areas
+- area: Open data
   key: cross
   topics:
     - slug: datasets
