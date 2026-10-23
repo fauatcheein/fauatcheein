@@ -31,7 +31,7 @@
   var map = L.map('network-map', { scrollWheelZoom: false, attributionControl: false, minZoom: 0, maxZoom: 7, zoomSnap: 0.25 });
 
   fetch('{{ "/assets/data/world-110m.json" | relative_url }}').then(function (r) { return r.json(); }).then(function (world) {
-    // world outline drawn from our own file: no map provider or API key needed
+    // world outline drawn from our own file (assets/data/world-110m.json)
     var geo = topojson.feature(world, world.objects.countries);
     geo.features = geo.features.filter(function (f) { return f.properties.a2 !== 'AQ'; });
     geo.features.forEach(function (f) {
