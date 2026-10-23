@@ -32,6 +32,13 @@
   lng: 16.8790
   people: Giulio Reina
 
+- name: STIIMA, National Research Council of Italy (CNR)
+  place: Bari, Italy
+  type: collaborator
+  lat: 41.1250
+  lng: 16.8620
+  people: Rosa Pia Devanna · LiDAR point clouds and localisation in orchards
+
 - name: Universitat de Lleida
   place: Lleida, Spain
   type: collaborator
@@ -93,7 +100,7 @@
   type: collaborator
   lat: -33.4410
   lng: -70.6400
-  people: Miguel Torres Torriti
+  people: Miguel Torres-Torriti, Paola Nazate-Burgos · SLAM for legged robots, point clouds in orchards
 
 - name: Universidad de los Andes
   place: Santiago, Chile
@@ -129,6 +136,90 @@
   lat: -33.9170
   lng: 151.2310
   people: José Guivant
+
+- name: Ankara University
+  place: Ankara, Türkiye
+  type: collaborator
+  lat: 39.9370
+  lng: 32.8630
+  people: Kamil Saçılık, Necati Çetin, Burak Özbey · spectral and dielectric sensing of crops and food
+
+- name: Erciyes University and Kayseri University
+  place: Kayseri, Türkiye
+  type: collaborator
+  lat: 38.7120
+  lng: 35.5300
+  people: Burak Ulu, Banu Ulu · avocado water stress from multispectral imaging
+
+- name: Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB) and TU Berlin
+  place: Potsdam and Berlin, Germany
+  type: collaborator
+  lat: 52.4330
+  lng: 13.0120
+  people: Redmond R. Shamshiri, Cornelia Weltzien, Volker Dworak, Maryam Behjati · orchard robot navigation and control
+
+- name: Kharazmi University
+  place: Tehran, Iran
+  type: collaborator
+  lat: 35.7000
+  lng: 51.3900
+  people: Alireza Azimi, Aliakbar Ghasemzadeh · robust path tracking
+
+- name: University of California, Riverside
+  place: Riverside, California, USA
+  type: collaborator
+  lat: 33.9737
+  lng: -117.3281
+  people: Konstantinos Karydis · robust path tracking
+
+- name: University of Technology Sydney
+  place: Sydney, Australia
+  type: collaborator
+  lat: -33.8832
+  lng: 151.2005
+  people: Shoudong Huang · lidar SLAM for legged robots
+
+- name: Henan Agricultural University and Henan Academy of Agricultural Sciences
+  place: Zhengzhou, China
+  type: collaborator
+  lat: 34.7466
+  lng: 113.6253
+  people: Wei Guo, Shangzhou Li, Juan Liu and team · UAV-satellite monitoring of peanut disease
+
+- name: Nanjing Institute of Agricultural Mechanization (Ministry of Agriculture and Rural Affairs)
+  place: Nanjing, China
+  type: collaborator
+  lat: 32.0200
+  lng: 118.8500
+  people: Chengqian Jin · sprayer control, seed-potato cutting robots
+
+- name: College of Agricultural Engineering and Food Science
+  place: Zibo, Shandong, China
+  type: collaborator
+  lat: 36.8130
+  lng: 118.0550
+  people: Yanxin Wang · canopy-based sprayer speed control
+
+- name: Dalian Academy of Agricultural Sciences and Liaoning Normal University
+  place: Dalian, China
+  type: collaborator
+  lat: 38.9140
+  lng: 121.6147
+  people: Hui Zhao, Bo Fu · nocturnal insect pest monitoring
+
+- name: Brunel University of London
+  place: London, UK
+  type: collaborator
+  lat: 51.5326
+  lng: -0.4727
+  people: Mingfeng Wang · selective laser weeding
+
+- name: sinc(i), UNL-CONICET
+  place: Santa Fe, Argentina
+  type: collaborator
+  lat: -31.6400
+  lng: -60.6720
+  people: Néstor N. Deniz · path tracking for legged robots and N-trailer vehicles
 
 # ---------------------------------------------------------------- where our PhD graduates work
 - name: University of Lincoln

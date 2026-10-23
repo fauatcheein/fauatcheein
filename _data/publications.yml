@@ -13,15 +13,15 @@
   topics: [spectral, vision, food]
 
 - title: "A Single-Step Optimization-Based Kinematic Controller for Real-Time Path Tracking of Legged Robots"
-  authors: "Zapata, S., Urvina, R., Aro, K., Aguilar, E., Auat Cheein, F., Prado, A."
-  venue: "IEEE Transactions on Industrial Informatics"
+  authors: "Deniz, N.N., Auat Cheein, F."
+  venue: "IEEE Transactions on Industrial Informatics, 22 (2), 729–739"
   year: 2026
   doi: "10.1109/TII.2025.3609176"
   topics: [legged, navigation]
 
-- title: "Consistent lidar-only SLAM for legged agricultural robots in arboreal environments via robust point cloud registration"
-  authors: "Jiang, H., Jiang, L., He, L., et al., Auat Cheein, F."
-  venue: "Computers and Electronics in Agriculture, 111687"
+- title: "Consistent lidar-only SLAM for legged agricultural robots in arboreal environments via robust dimensionality reduction"
+  authors: "Nazate-Burgos, P., Torres-Torriti, M., Huang, S., Auat Cheein, F."
+  venue: "Computers and Electronics in Agriculture, 247, 111687"
   year: 2026
   doi: "10.1016/j.compag.2026.111687"
   topics: [lidar, legged, field-robots]
@@ -34,25 +34,25 @@
   topics: [vision, estimation, phenotyping]
 
 - title: "Design and Performance Analysis of a Delta Robot for High-Speed Seed Cutting"
-  authors: "Huang, J. et al., Auat Cheein, F."
-  venue: "Journal of Field Robotics"
+  authors: "Huang, J., Wang, X., Jin, C., Auat Cheein, F."
+  venue: "Journal of Field Robotics, 43 (3), 1959–1972"
   year: 2026
   doi: "10.1002/rob.70126"
   topics: [manipulation, field-robots, food]
 
-- title: "Assessment of avocado water stress using multispectral imaging and deep learning: Toward sustainable irrigation in precision agriculture"
-  authors: "Valdivia, A. et al., Auat Cheein, F."
+- title: "Assessment of avocado water stress using multispectral imaging and deep learning: Toward scalable, cost-effective irrigation monitoring"
+  authors: "Estrada, J.S., Cetin, N., Sacilik, K., Ulu, B., Ulu, B., Auat Cheein, F."
   venue: "Expert Systems with Applications, 132688"
   year: 2026
   doi: "10.1016/j.eswa.2026.132688"
   topics: [spectral, vision, phenotyping]
 
-- title: "From plots to region: Machine learning-based UAV-satellite integration for mapping fractional green cover"
-  authors: "Li et al., Auat Cheein, F."
-  venue: "Artificial Intelligence in Agriculture"
+- title: "From plots to region: Machine learning-based UAV-satellite integration for mapping fractional coverage of peanut southern blight"
+  authors: "Li, S., Liu, J., Zhang, Y., Feng, S., Liu, L., Yue, J., Liu, Y., Shu, M., Auat Cheein, F., Guo, W."
+  venue: "Artificial Intelligence in Agriculture, 16 (2), 974–997"
   year: 2026
   doi: "10.1016/j.aiia.2026.04.008"
-  topics: [uav-satellite, vision, phenotyping, environment]
+  topics: [uav-satellite, vision, pests]
 
 - title: "3D crop reconstruction: A review of hyperspectral and multispectral approaches"
   authors: "Karukayil, A., Mota, J.F.C., Auat Cheein, F."
@@ -83,16 +83,16 @@
   doi: "10.3390/bios16010013"
   topics: [phenotyping]
 
-- title: "Integrated microwave cavity perturbation sensor for nondestructive estimation of moisture"
-  authors: "Precoppe, M. et al., Auat Cheein, F."
-  venue: "PLOS ONE, e0343435"
+- title: "Integrated microwave cavity perturbation sensor for nondestructive estimation of moisture content of grains: A case study on wheat and chickpea"
+  authors: "Saçılık, K., Çetin, N., Özbey, B., Auat Cheein, F."
+  venue: "PLOS ONE, 21 (3), e0343435"
   year: 2026
   doi: "10.1371/journal.pone.0343435"
   topics: [food]
 
-- title: "Prediction of vegetation indices from downsampled hyperspectral data using machine learning"
-  authors: "Vargas, J. et al., Auat Cheein, F."
-  venue: "PLOS ONE, e0323158"
+- title: "Prediction of vegetation indices from downsampled hyperspectral data using machine learning: A novel framework for olive crop monitoring"
+  authors: "Estrada, J.S., Çetin, N., Saçılık, K., Guo, Z., Auat Cheein, F."
+  venue: "PLOS ONE, 21 (3), e0323158"
   year: 2026
   doi: "10.1371/journal.pone.0323158"
   topics: [spectral, phenotyping]
@@ -149,7 +149,7 @@
   topics: [estimation, navigation, field-robots]
 
 - title: "Exploring the Frequency Domain Point Cloud Processing for Localisation Purposes in Arboreal Environments"
-  authors: "Karukayil, A., Mota, J.F.C., Auat Cheein, F."
+  authors: "Devanna, R.P., Torres-Torriti, M., Sacilik, K., Cetin, N., Auat Cheein, F."
   venue: "Algorithms, 18 (8), 522"
   year: 2025
   doi: "10.3390/a18080522"
