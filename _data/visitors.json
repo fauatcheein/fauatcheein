@@ -1,6 +1,13 @@
 {
-  "updated": null,
-  "since": null,
-  "total": 0,
-  "countries": {}
+  "updated": "2026-10-23T13:52:00Z",
+  "since": "2026-10-01",
+  "total": 6,
+  "countries": {
+    "CL": 4,
+    "GB": 2
+  },
+  "names": {
+    "CL": "Chile",
+    "GB": "United Kingdom"
+  }
 }
