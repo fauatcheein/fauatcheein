@@ -1,9 +1,9 @@
 """Fetch visitor counts per country from GoatCounter and write _data/visitors.json.
 
-Run daily by .github/workflows/visitor-stats.yml. Needs two settings in the
-GitHub repository (Settings > Secrets and variables > Actions):
-  secret   GOATCOUNTER_TOKEN  API key from GoatCounter (Settings > API, permission "Read statistics")
-  variable GOATCOUNTER_CODE   your GoatCounter site code, e.g. "fauatcheein"
+Run daily by .github/workflows/visitor-stats.yml, which sets the site code
+("fauatcheein"). Needs one secret in the GitHub repository
+(Settings > Secrets and variables > Actions > Secrets):
+  GOATCOUNTER_TOKEN  API token from GoatCounter (Settings > API tokens, read statistics)
 """
 import json
 import os

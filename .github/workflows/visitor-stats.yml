@@ -19,7 +19,7 @@ jobs:
       - name: Fetch country statistics from GoatCounter
         env:
           GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
-          GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+          GOATCOUNTER_CODE: fauatcheein
         run: python scripts/update_visitors.py
       - name: Commit if changed
         run: |
