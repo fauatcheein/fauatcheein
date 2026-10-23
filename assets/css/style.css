@@ -385,3 +385,15 @@ ul.plain ul { margin-top: .4em; }
   .visitor-map { height: 300px; }
 }
 .network-map.leaflet-container { background: color-mix(in srgb, var(--field) 4%, var(--surface)); }
+
+/* network headline numbers and pin-size key */
+.network-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 4px 0 16px; max-width: 1120px; }
+.network-facts p { margin: 0; }
+.network-facts strong { display: block; font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 1.7rem; line-height: 1.1; color: var(--field); font-variant-numeric: tabular-nums; }
+.network-facts span { display: block; font-size: .92rem; color: var(--muted); line-height: 1.35; margin-top: 2px; }
+.dot-earlier { background: #9AAEC4; }
+.size-key { gap: 4px !important; }
+.ring { display: inline-block; border-radius: 50%; border: 1.5px solid var(--muted); }
+.ring.r1 { width: 8px; height: 8px; } .ring.r2 { width: 12px; height: 12px; } .ring.r3 { width: 17px; height: 17px; margin-right: 5px; }
+.leaflet-popup-content .pop-stats { font-weight: 600; }
+@media (max-width: 700px) { .network-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

@@ -1,18 +1,29 @@
 {% assign home = site.data.network | where: "type", "home" %}
 {% assign collab = site.data.network | where: "type", "collaborator" %}
-{% assign alumni = site.data.network | where: "type", "alumni" %}
+{% assign stats = site.data.network_stats %}
+<div class="network-facts">
+  <p><strong>{{ collab | size }}</strong><span>collaborating institutions</span></p>
+  <p><strong id="net-countries">–</strong><span>countries</span></p>
+  <p><strong>{{ stats.papers_external }}</strong><span>of {{ stats.papers_total }} papers with external partners</span></p>
+  <p><strong>{{ stats.first_year }}–{{ site.time | date: "%Y" }}</strong><span>from Scopus records</span></p>
+</div>
 <figure class="network">
   <div id="network-map" class="network-map" role="region" aria-label="World map of collaborating institutions"></div>
   <figcaption class="network-legend">
-    <span><i class="dot dot-home"></i>Where I work and have worked ({{ home | size }})</span>
-    <span><i class="dot dot-collaborator"></i>Collaborating institutions ({{ collab | size }})</span>
-    <span><i class="dot dot-alumni"></i>Where our PhD graduates work ({{ alumni | size }})</span>
+    <span><i class="dot dot-home"></i>Where I work and have worked</span>
+    <span><i class="dot dot-collaborator"></i>Current collaborators (joint papers since 2023)</span>
+    <span><i class="dot dot-earlier"></i>Earlier collaborators</span>
+    <span><i class="dot dot-alumni"></i>Where our PhD graduates work</span>
+    <span class="size-key"><i class="ring r1"></i><i class="ring r2"></i><i class="ring r3"></i>Larger pin, more joint papers</span>
   </figcaption>
 </figure>
 <details class="network-list">
   <summary>List of institutions</summary>
   <ul>
-    {% for n in site.data.network %}<li><strong>{{ n.name }}</strong>, {{ n.place }}{% if n.people %} · {{ n.people }}{% endif %}</li>
+    {% assign sorted = collab | sort: "papers" | reverse %}
+    {% for n in home %}<li><strong>{{ n.name }}</strong>, {{ n.place }}{% if n.papers %} · {{ n.papers }} papers, {{ n.first }}–{{ n.last }}{% endif %}</li>
+    {% endfor %}
+    {% for n in sorted %}<li><strong>{{ n.name }}</strong>, {{ n.place }}{% if n.papers %} · {{ n.papers }} joint {% if n.papers == 1 %}paper{% else %}papers{% endif %}, {% if n.first == n.last %}{{ n.first }}{% else %}{{ n.first }}–{{ n.last }}{% endif %}{% endif %}{% if n.people %} · {{ n.people }}{% endif %}</li>
     {% endfor %}
   </ul>
 </details>
@@ -23,13 +34,21 @@
   var places = {{ site.data.network | jsonify }};
   var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   var css = getComputedStyle(document.documentElement);
+  function v(n, f) { return css.getPropertyValue(n).trim() || f; }
   var colour = {
-    home: css.getPropertyValue('--signal').trim() || '#F2A900',
-    collaborator: css.getPropertyValue('--robotics').trim() || '#1F4E8C',
-    alumni: css.getPropertyValue('--remote').trim() || '#0E7187'
+    home: v('--signal', '#F2A900'),
+    collaborator: v('--robotics', '#1F4E8C'),
+    earlier: dark ? '#5F7590' : '#9AAEC4',
+    alumni: v('--remote', '#0E7187')
   };
-  var map = L.map('network-map', { scrollWheelZoom: false, attributionControl: false, minZoom: 0, maxZoom: 7, zoomSnap: 0.25 });
+  function kind(p) { return p.type === 'collaborator' && p.last && p.last < 2023 ? 'earlier' : p.type; }
+  function radius(p) { return p.type === 'alumni' ? 4 : Math.min(16, 4 + 2.2 * Math.sqrt(p.papers || 1)); }
 
+  var countries = {};
+  places.forEach(function (p) { if (p.type === 'collaborator') countries[p.place.split(',').pop().trim()] = 1; });
+  document.getElementById('net-countries').textContent = Object.keys(countries).length;
+
+  var map = L.map('network-map', { scrollWheelZoom: false, attributionControl: false, minZoom: 0, maxZoom: 7, zoomSnap: 0.25 });
   fetch('{{ "/assets/data/world-110m.json" | relative_url }}').then(function (r) { return r.json(); }).then(function (world) {
     // world outline drawn from our own file (assets/data/world-110m.json)
     var geo = topojson.feature(world, world.objects.countries);
@@ -41,27 +60,26 @@
         for (var i = 1; i < ring.length; i++) { var d = ring[i][0] - ring[i - 1][0]; if (d > 180) ring[i][0] -= 360; else if (d < -180) ring[i][0] += 360; }
       }); });
     });
-    var land = L.geoJSON(geo, {
-      interactive: false,
-      style: { fillColor: dark ? '#1C2A3D' : '#E3E9F0', fillOpacity: 1, color: dark ? '#0D1520' : '#FFFFFF', weight: 0.6 }
-    }).addTo(map);
+    var land = L.geoJSON(geo, { interactive: false,
+      style: { fillColor: dark ? '#1C2A3D' : '#E3E9F0', fillOpacity: 1, color: dark ? '#0D1520' : '#FFFFFF', weight: 0.6 } }).addTo(map);
     map.fitBounds(land.getBounds(), { padding: [4, 4] });
 
-    // faint lines from Harper Adams to each collaborator
+    // faint lines from Harper Adams to current collaborators
     var hau = places.filter(function (p) { return p.name === 'Harper Adams University'; })[0];
     if (hau) places.forEach(function (p) {
-      if (p.type === 'collaborator') L.polyline([[hau.lat, hau.lng], [p.lat, p.lng]], { color: colour.collaborator, weight: 1, opacity: 0.3, interactive: false }).addTo(map);
+      if (kind(p) === 'collaborator') L.polyline([[hau.lat, hau.lng], [p.lat, p.lng]], { color: colour.collaborator, weight: 0.8, opacity: 0.22, interactive: false }).addTo(map);
     });
 
-    var order = { alumni: 0, collaborator: 1, home: 2 };
-    places.sort(function (a, b) { return order[a.type] - order[b.type]; });
-    places.forEach(function (p) {
+    // big pins first so small ones stay clickable on top
+    var order = { earlier: 0, collaborator: 1, home: 2, alumni: 3 };
+    places.slice().sort(function (a, b) { return (order[kind(a)] - order[kind(b)]) || ((b.papers || 0) - (a.papers || 0)); }).forEach(function (p) {
+      var k = kind(p);
       var m = L.circleMarker([p.lat, p.lng], {
-        radius: p.type === 'home' ? 8 : 6, color: dark ? '#0D1520' : '#fff', weight: 2,
-        fillColor: colour[p.type], fillOpacity: 1
+        radius: radius(p), color: dark ? '#0D1520' : '#fff', weight: 1.5, fillColor: colour[k], fillOpacity: 0.92
       }).addTo(map);
-      m.bindPopup('<strong>' + p.name + '</strong><br><span class="pop-place">' + p.place + '</span>' + (p.people ? '<br>' + p.people : ''));
-      m.bindTooltip(p.name, { direction: 'top', offset: [0, -6] });
+      var stats = p.papers ? '<br><span class="pop-stats">' + p.papers + (p.type === 'home' ? ' papers' : (p.papers === 1 ? ' joint paper' : ' joint papers')) + ', ' + (p.first === p.last ? p.first : p.first + '–' + p.last) + '</span>' : '';
+      m.bindPopup('<strong>' + p.name + '</strong><br><span class="pop-place">' + p.place + '</span>' + stats + (p.people ? '<br>' + p.people : ''));
+      m.bindTooltip(p.name + (p.papers ? ' · ' + p.papers : ''), { direction: 'top', offset: [0, -6] });
     });
   });
 })();

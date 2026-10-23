@@ -1,265 +1,684 @@
-# Collaboration network shown on the map on the Research page.
-# type: home | collaborator | alumni   (sets the pin colour)
-# lat / lng: decimal degrees (right-click a place in Google Maps to copy them)
-# people: optional, shown in the pop-up
-
-- name: Harper Adams University
-  place: Newport, Shropshire, UK
-  type: home
-  lat: 52.7792
-  lng: -2.4270
-  people: Harper Institute of Technology
-
-- name: Heriot-Watt University and the National Robotarium
-  place: Edinburgh, UK
-  type: home
-  lat: 55.9095
-  lng: -3.3200
-  people: Former post (2022–2024); current PhD researchers
+# Collaboration network shown on the Network page.
+# Generated from the Scopus export of all publications (2006-2027): one entry per institution,
+# with the number of joint papers and the first/last year. The Nature Ecology & Evolution
+# consortium paper (2025, ~70 institutions) is left out so it does not dominate the map.
+# type: home | collaborator | alumni   (alumni = where PhD graduates now work)
+# Collaborators whose last joint paper is 2023 or later are shown as current.
 
 - name: Universidad Técnica Federico Santa María
   place: Valparaíso, Chile
   type: home
-  lat: -33.0350
-  lng: -71.5960
+  lat: -33.035
+  lng: -71.596
+  papers: 154
+  first: 2011
+  last: 2026
   people: Former post (2011–2026)
-
-# ---------------------------------------------------------------- collaborators
-- name: Politecnico di Bari
-  place: Bari, Italy
-  type: collaborator
-  lat: 41.1090
-  lng: 16.8790
-  people: Giulio Reina
-
-- name: STIIMA, National Research Council of Italy (CNR)
-  place: Bari, Italy
-  type: collaborator
-  lat: 41.1250
-  lng: 16.8620
-  people: Rosa Pia Devanna · LiDAR point clouds and localisation in orchards
-
-- name: Universitat de Lleida
-  place: Lleida, Spain
-  type: collaborator
-  lat: 41.6160
-  lng: 0.6230
-  people: Joan Ramon Rosell Polo, Ricardo Sanz, Jordi Gené, Eduard Gregorio, Alexandre Escolà
-
-- name: Poznan University of Technology
-  place: Poznań, Poland
-  type: collaborator
-  lat: 52.4040
-  lng: 16.9500
-  people: Maciej Michałek
-
-- name: University of Ljubljana
-  place: Ljubljana, Slovenia
-  type: collaborator
-  lat: 46.0500
-  lng: 14.4690
-  people: Sašo Blažič
-
-- name: KU Leuven
-  place: Leuven, Belgium
-  type: collaborator
-  lat: 50.8770
-  lng: 4.7000
-  people: Tomas Norton · Royal Society exchange on livestock robotics
-
-- name: Universidade do Porto
-  place: Porto, Portugal
-  type: collaborator
-  lat: 41.1780
-  lng: -8.5960
-  people: Fernando Lobo Pereira
-
-- name: University of California, Davis
-  place: Davis, California, USA
-  type: collaborator
-  lat: 38.5380
-  lng: -121.7620
-  people: Stavros Vougioukas
-
-- name: Carnegie Mellon University
-  place: Pittsburgh, Pennsylvania, USA
-  type: collaborator
-  lat: 40.4430
-  lng: -79.9430
-  people: George Kantor
-
-- name: Washington State University
-  place: Pullman, Washington, USA
-  type: collaborator
-  lat: 46.7310
-  lng: -117.1610
-  people: Manoj Karkee, Qin Zhang
-
+- name: Harper Adams University
+  place: Newport, Shropshire, UK
+  type: home
+  lat: 52.7792
+  lng: -2.427
+  papers: 52
+  first: 2024
+  last: 2027
+  people: Harper Institute of Technology
 - name: Pontificia Universidad Católica de Chile
   place: Santiago, Chile
   type: collaborator
-  lat: -33.4410
-  lng: -70.6400
-  people: Miguel Torres-Torriti, Paola Nazate-Burgos · SLAM for legged robots, point clouds in orchards
-
-- name: Universidad de los Andes
-  place: Santiago, Chile
-  type: collaborator
-  lat: -33.4020
-  lng: -70.5070
-  people: José Delpiano
-
-- name: Universidade Federal and Instituto Federal do Espírito Santo
-  place: Vitória, Brazil
-  type: collaborator
-  lat: -20.2770
-  lng: -40.3030
-  people: Alberto de Souza, Filipe Müller, Teodiano Freire Bastos-Filho
-
+  lat: -33.499
+  lng: -70.612
+  papers: 39
+  first: 2014
+  last: 2027
+  people: Miguel Torres-Torriti, Paola Nazate-Burgos, Giancarlo Troni
+- name: Heriot-Watt University and the National Robotarium
+  place: Edinburgh, UK
+  type: home
+  lat: 55.9095
+  lng: -3.32
+  papers: 33
+  first: 2022
+  last: 2026
+  people: Former post (2022–2024); current PhD researchers
 - name: Universidad Nacional de San Juan
   place: San Juan, Argentina
+  type: home
+  lat: -31.537
+  lng: -68.536
+  papers: 32
+  first: 2006
+  last: 2016
+  people: Ricardo Carelli, Fernando di Sciascio · MSc and PhD
+- name: Federal University and Federal Institute of Espírito Santo
+  place: Vitória, Brazil
   type: collaborator
-  lat: -31.5370
-  lng: -68.5360
-  people: Ricardo Carelli · where I completed my MSc and PhD
-
-- name: Northwest A&F University
-  place: Yangling, China
+  lat: -20.277
+  lng: -40.303
+  papers: 25
+  first: 2006
+  last: 2021
+  people: Teodiano Freire Bastos-Filho, Alberto de Souza, Filipe Müller
+- name: Universitat de Lleida (Agrotecnio) and IRTA
+  place: Lleida, Spain
   type: collaborator
-  lat: 34.2670
-  lng: 108.0670
-  people: Longsheng Fu
-
-- name: UNSW Sydney
-  place: Sydney, Australia
-  type: collaborator
-  lat: -33.9170
-  lng: 151.2310
-  people: José Guivant
-
+  lat: 41.616
+  lng: 0.623
+  papers: 16
+  first: 2015
+  last: 2024
+  people: Joan Ramon Rosell-Polo, Eduard Gregorio, Alexandre Escolà, Jordi Gené-Mola, Ricardo Sanz
 - name: Ankara University
   place: Ankara, Türkiye
   type: collaborator
-  lat: 39.9370
-  lng: 32.8630
-  people: Kamil Saçılık, Necati Çetin, Burak Özbey · spectral and dielectric sensing of crops and food
-
-- name: Erciyes University and Kayseri University
-  place: Kayseri, Türkiye
+  lat: 39.937
+  lng: 32.863
+  papers: 11
+  first: 2025
+  last: 2026
+  people: Kamil Saçılık, Necati Çetin, Burak Özbey
+- name: University of California, Davis
+  place: Davis, California, USA
   type: collaborator
-  lat: 38.7120
-  lng: 35.5300
-  people: Burak Ulu, Banu Ulu · avocado water stress from multispectral imaging
-
-- name: Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB) and TU Berlin
-  place: Potsdam and Berlin, Germany
+  lat: 38.538
+  lng: -121.762
+  papers: 8
+  first: 2020
+  last: 2025
+  people: Stavros Vougioukas
+- name: Shandong University of Technology
+  place: Zibo, China
   type: collaborator
-  lat: 52.4330
-  lng: 13.0120
-  people: Redmond R. Shamshiri, Cornelia Weltzien, Volker Dworak, Maryam Behjati · orchard robot navigation and control
-
-- name: Kharazmi University
-  place: Tehran, Iran
+  lat: 36.813
+  lng: 118.055
+  papers: 8
+  first: 2025
+  last: 2026
+- name: Universidad Católica del Norte
+  place: Antofagasta, Chile
   type: collaborator
-  lat: 35.7000
-  lng: 51.3900
-  people: Alireza Azimi, Aliakbar Ghasemzadeh · robust path tracking
-
-- name: University of California, Riverside
-  place: Riverside, California, USA
-  type: collaborator
-  lat: 33.9737
-  lng: -117.3281
-  people: Konstantinos Karydis · robust path tracking
-
-- name: University of Technology Sydney
+  lat: -23.68
+  lng: -70.41
+  papers: 7
+  first: 2023
+  last: 2026
+- name: UNSW Sydney
   place: Sydney, Australia
   type: collaborator
-  lat: -33.8832
-  lng: 151.2005
-  people: Shoudong Huang · lidar SLAM for legged robots
-
+  lat: -33.917
+  lng: 151.231
+  papers: 7
+  first: 2014
+  last: 2021
+  people: José Guivant
+- name: Universidad Adolfo Ibáñez
+  place: Santiago, Chile
+  type: collaborator
+  lat: -33.49
+  lng: -70.515
+  papers: 7
+  first: 2019
+  last: 2024
+- name: Carnegie Mellon University
+  place: Pittsburgh, USA
+  type: collaborator
+  lat: 40.443
+  lng: -79.943
+  papers: 6
+  first: 2017
+  last: 2021
+  people: George Kantor
+- name: Universidad Andrés Bello
+  place: Santiago, Chile
+  type: collaborator
+  lat: -33.435
+  lng: -70.615
+  papers: 6
+  first: 2022
+  last: 2026
+- name: Universidad del Bío-Bío
+  place: Concepción, Chile
+  type: collaborator
+  lat: -36.82
+  lng: -73.03
+  papers: 6
+  first: 2020
+  last: 2023
+- name: Nanjing Institute of Agricultural Mechanization (MARA)
+  place: Nanjing, China
+  type: collaborator
+  lat: 32.02
+  lng: 118.85
+  papers: 5
+  first: 2025
+  last: 2026
+  people: Chengqian Jin
+- name: Universidad de Chile and Hospital Clínico Universidad de Chile
+  place: Santiago, Chile
+  type: collaborator
+  lat: -33.42
+  lng: -70.653
+  papers: 5
+  first: 2020
+  last: 2023
+- name: Poznan University of Technology
+  place: Poznań, Poland
+  type: collaborator
+  lat: 52.404
+  lng: 16.95
+  papers: 4
+  first: 2018
+  last: 2023
+  people: Maciej Michałek
+- name: Northwest A&F University
+  place: Yangling, China
+  type: collaborator
+  lat: 34.267
+  lng: 108.067
+  papers: 4
+  first: 2023
+  last: 2024
+  people: Longsheng Fu
+- name: Sivas Cumhuriyet University
+  place: Sivas, Türkiye
+  type: collaborator
+  lat: 39.71
+  lng: 37.03
+  papers: 4
+  first: 2025
+  last: 2026
+- name: Liaocheng University
+  place: Liaocheng, China
+  type: collaborator
+  lat: 36.43
+  lng: 115.98
+  papers: 4
+  first: 2026
+  last: 2026
+- name: China Agricultural University
+  place: Beijing, China
+  type: collaborator
+  lat: 40.002
+  lng: 116.35
+  papers: 4
+  first: 2026
+  last: 2026
+- name: Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB)
+  place: Potsdam, Germany
+  type: collaborator
+  lat: 52.433
+  lng: 13.012
+  papers: 4
+  first: 2024
+  last: 2026
+  people: Redmond R. Shamshiri, Cornelia Weltzien, Volker Dworak, Maryam Behjati
 - name: Henan Agricultural University and Henan Academy of Agricultural Sciences
   place: Zhengzhou, China
   type: collaborator
   lat: 34.7466
   lng: 113.6253
-  people: Wei Guo, Shangzhou Li, Juan Liu and team · UAV-satellite monitoring of peanut disease
-
-- name: Nanjing Institute of Agricultural Mechanization (Ministry of Agriculture and Rural Affairs)
-  place: Nanjing, China
+  papers: 4
+  first: 2025
+  last: 2026
+  people: Wei Guo, Shangzhou Li, Juan Liu
+- name: Universidad de Sevilla
+  place: Seville, Spain
   type: collaborator
-  lat: 32.0200
-  lng: 118.8500
-  people: Chengqian Jin · sprayer control, seed-potato cutting robots
-
-- name: College of Agricultural Engineering and Food Science
-  place: Zibo, Shandong, China
+  lat: 37.38
+  lng: -5.99
+  papers: 4
+  first: 2020
+  last: 2022
+- name: Politecnico di Bari and University of Salento
+  place: Bari, Italy
   type: collaborator
-  lat: 36.8130
-  lng: 118.0550
-  people: Yanxin Wang · canopy-based sprayer speed control
-
-- name: Dalian Academy of Agricultural Sciences and Liaoning Normal University
+  lat: 41.109
+  lng: 16.879
+  papers: 4
+  first: 2017
+  last: 2025
+  people: Giulio Reina
+- name: Liaoning Normal University, Dalian Polytechnic University and Dalian Academy of Agricultural Sciences
   place: Dalian, China
   type: collaborator
-  lat: 38.9140
+  lat: 38.914
   lng: 121.6147
-  people: Hui Zhao, Bo Fu · nocturnal insect pest monitoring
-
+  papers: 3
+  first: 2025
+  last: 2027
+  people: Hui Zhao, Bo Fu
+- name: Universidade do Porto
+  place: Porto, Portugal
+  type: collaborator
+  lat: 41.178
+  lng: -8.596
+  papers: 3
+  first: 2010
+  last: 2013
+  people: Fernando Lobo Pereira
+- name: Technische Universität Berlin
+  place: Berlin, Germany
+  type: collaborator
+  lat: 52.512
+  lng: 13.327
+  papers: 3
+  first: 2024
+  last: 2025
+  people: Cornelia Weltzien, Redmond R. Shamshiri
+- name: Universidad Nacional de Santiago del Estero
+  place: Santiago del Estero, Argentina
+  type: collaborator
+  lat: -27.8
+  lng: -64.26
+  papers: 3
+  first: 2019
+  last: 2022
+- name: Escuela Politécnica Nacional
+  place: Quito, Ecuador
+  type: collaborator
+  lat: -0.21
+  lng: -78.489
+  papers: 3
+  first: 2020
+  last: 2025
+- name: Universidad de los Andes
+  place: Santiago, Chile
+  type: collaborator
+  lat: -33.402
+  lng: -70.507
+  papers: 3
+  first: 2020
+  last: 2024
+  people: José Delpiano
+- name: Necmettin Erbakan University
+  place: Konya, Türkiye
+  type: collaborator
+  lat: 37.87
+  lng: 32.48
+  papers: 2
+  first: 2025
+  last: 2026
+- name: INIA La Cruz
+  place: La Cruz, Chile
+  type: collaborator
+  lat: -32.826
+  lng: -71.229
+  papers: 2
+  first: 2016
+  last: 2018
+- name: Visteon Electronics Germany
+  place: Karlsruhe, Germany
+  type: collaborator
+  lat: 49.0069
+  lng: 8.4037
+  papers: 2
+  first: 2019
+  last: 2021
+- name: University of Ljubljana
+  place: Ljubljana, Slovenia
+  type: collaborator
+  lat: 46.05
+  lng: 14.469
+  papers: 2
+  first: 2015
+  last: 2018
+  people: Sašo Blažič
+- name: sinc(i), UNL-CONICET
+  place: Santa Fe, Argentina
+  type: collaborator
+  lat: -31.64
+  lng: -60.672
+  papers: 2
+  first: 2025
+  last: 2026
+  people: Néstor N. Deniz
+- name: University of Pisa
+  place: Pisa, Italy
+  type: collaborator
+  lat: 43.72
+  lng: 10.4
+  papers: 2
+  first: 2022
+  last: 2022
+- name: Centre for Automation and Robotics (CSIC-UPM)
+  place: Madrid, Spain
+  type: collaborator
+  lat: 40.313
+  lng: -3.483
+  papers: 2
+  first: 2024
+  last: 2024
+- name: Universidad de O'Higgins
+  place: Rancagua, Chile
+  type: collaborator
+  lat: -34.17
+  lng: -70.74
+  papers: 2
+  first: 2022
+  last: 2023
+- name: Universidad de Valparaíso
+  place: Valparaíso, Chile
+  type: collaborator
+  lat: -33.045
+  lng: -71.61
+  papers: 2
+  first: 2019
+  last: 2024
+- name: Civil Aviation University of China
+  place: Tianjin, China
+  type: collaborator
+  lat: 39.1
+  lng: 117.35
+  papers: 2
+  first: 2026
+  last: 2027
+- name: Universidad del Desarrollo and Clínica Alemana
+  place: Santiago, Chile
+  type: collaborator
+  lat: -33.392
+  lng: -70.507
+  papers: 2
+  first: 2021
+  last: 2022
+- name: University of Agriculture, Faisalabad
+  place: Faisalabad, Pakistan
+  type: collaborator
+  lat: 31.43
+  lng: 73.07
+  papers: 1
+  first: 2023
+  last: 2023
+- name: Hospital de Peñablanca
+  place: Villa Alemana, Chile
+  type: collaborator
+  lat: -33.05
+  lng: -71.37
+  papers: 1
+  first: 2019
+  last: 2019
+- name: Universitat Politècnica de Catalunya
+  place: Barcelona, Spain
+  type: collaborator
+  lat: 41.389
+  lng: 2.113
+  papers: 1
+  first: 2019
+  last: 2019
+- name: University of Lincoln
+  place: Lincoln, UK
+  type: collaborator
+  lat: 53.228
+  lng: -0.548
+  papers: 1
+  first: 2023
+  last: 2023
+- name: University of Southern Denmark
+  place: Odense, Denmark
+  type: collaborator
+  lat: 55.37
+  lng: 10.43
+  papers: 1
+  first: 2026
+  last: 2026
+- name: Agricultural University of Athens
+  place: Athens, Greece
+  type: collaborator
+  lat: 37.983
+  lng: 23.706
+  papers: 1
+  first: 2024
+  last: 2024
+- name: Instituto de Fomento Pesquero
+  place: Valparaíso, Chile
+  type: collaborator
+  lat: -33.03
+  lng: -71.62
+  papers: 1
+  first: 2018
+  last: 2018
+- name: Universitat Politècnica de València
+  place: Valencia, Spain
+  type: collaborator
+  lat: 39.481
+  lng: -0.34
+  papers: 1
+  first: 2026
+  last: 2026
+- name: Monash University
+  place: Melbourne, Australia
+  type: collaborator
+  lat: -37.91
+  lng: 145.136
+  papers: 1
+  first: 2026
+  last: 2026
+- name: South China Agricultural University
+  place: Guangzhou, China
+  type: collaborator
+  lat: 23.16
+  lng: 113.36
+  papers: 1
+  first: 2026
+  last: 2026
 - name: Brunel University of London
   place: London, UK
   type: collaborator
   lat: 51.5326
   lng: -0.4727
-  people: Mingfeng Wang · selective laser weeding
-
-- name: sinc(i), UNL-CONICET
-  place: Santa Fe, Argentina
+  papers: 1
+  first: 2026
+  last: 2026
+  people: Mingfeng Wang
+- name: University of California, Riverside
+  place: Riverside, California, USA
   type: collaborator
-  lat: -31.6400
-  lng: -60.6720
-  people: Néstor N. Deniz · path tracking for legged robots and N-trailer vehicles
-
-# ---------------------------------------------------------------- where our PhD graduates work
+  lat: 33.9737
+  lng: -117.3281
+  papers: 1
+  first: 2025
+  last: 2025
+  people: Konstantinos Karydis
+- name: Kharazmi University
+  place: Tehran, Iran
+  type: collaborator
+  lat: 35.7
+  lng: 51.39
+  papers: 1
+  first: 2025
+  last: 2025
+  people: Alireza Azimi, Aliakbar Ghasemzadeh
+- name: Chilquinta Distribución
+  place: Valparaíso, Chile
+  type: collaborator
+  lat: -33.045
+  lng: -71.62
+  papers: 1
+  first: 2024
+  last: 2024
+- name: Institute of Agricultural Sciences (ICA-CSIC)
+  place: Madrid, Spain
+  type: collaborator
+  lat: 40.441
+  lng: -3.687
+  papers: 1
+  first: 2015
+  last: 2015
+- name: Shandong Institute of Pomology
+  place: Tai'an, China
+  type: collaborator
+  lat: 36.19
+  lng: 117.12
+  papers: 1
+  first: 2027
+  last: 2027
+- name: Jilin University
+  place: Changchun, China
+  type: collaborator
+  lat: 43.82
+  lng: 125.28
+  papers: 1
+  first: 2027
+  last: 2027
+- name: Universidad Tecnológica Nacional
+  place: Córdoba, Argentina
+  type: collaborator
+  lat: -31.42
+  lng: -64.19
+  papers: 1
+  first: 2011
+  last: 2011
+- name: Jiangsu University of Science and Technology
+  place: Zhenjiang, China
+  type: collaborator
+  lat: 32.2
+  lng: 119.45
+  papers: 1
+  first: 2026
+  last: 2026
+- name: University of Technology Sydney
+  place: Sydney, Australia
+  type: collaborator
+  lat: -33.8832
+  lng: 151.2005
+  papers: 1
+  first: 2026
+  last: 2026
+  people: Shoudong Huang
+- name: STIIMA, National Research Council of Italy (CNR)
+  place: Bari, Italy
+  type: collaborator
+  lat: 41.125
+  lng: 16.862
+  papers: 1
+  first: 2025
+  last: 2025
+  people: Rosa Pia Devanna
+- name: Anhui Medical University
+  place: Hefei, China
+  type: collaborator
+  lat: 31.86
+  lng: 117.28
+  papers: 1
+  first: 2025
+  last: 2025
+- name: Shandong Academy of Agricultural Sciences and Shandong Agriculture and Engineering University
+  place: Jinan, China
+  type: collaborator
+  lat: 36.67
+  lng: 117.02
+  papers: 1
+  first: 2026
+  last: 2026
+- name: Universidad San Sebastián
+  place: Santiago, Chile
+  type: collaborator
+  lat: -33.44
+  lng: -70.63
+  papers: 1
+  first: 2023
+  last: 2023
+- name: Erciyes University and Kayseri University
+  place: Kayseri, Türkiye
+  type: collaborator
+  lat: 38.712
+  lng: 35.53
+  papers: 1
+  first: 2026
+  last: 2026
+  people: Burak Ulu, Banu Ulu
+- name: Pontificia Universidad Católica de Valparaíso
+  place: Valparaíso, Chile
+  type: collaborator
+  lat: -33.044
+  lng: -71.605
+  papers: 1
+  first: 2024
+  last: 2024
+- name: Universidad Internacional del Ecuador
+  place: Quito, Ecuador
+  type: collaborator
+  lat: -0.16
+  lng: -78.44
+  papers: 1
+  first: 2024
+  last: 2024
+- name: Yozgat Bozok University
+  place: Yozgat, Türkiye
+  type: collaborator
+  lat: 39.82
+  lng: 34.81
+  papers: 1
+  first: 2026
+  last: 2026
+- name: University of Coimbra
+  place: Coimbra, Portugal
+  type: collaborator
+  lat: 40.207
+  lng: -8.426
+  papers: 1
+  first: 2021
+  last: 2021
+- name: Wangjing Hospital
+  place: Beijing, China
+  type: collaborator
+  lat: 39.99
+  lng: 116.47
+  papers: 1
+  first: 2025
+  last: 2025
+- name: King Saud University
+  place: Riyadh, Saudi Arabia
+  type: collaborator
+  lat: 24.716
+  lng: 46.619
+  papers: 1
+  first: 2025
+  last: 2025
+- name: KU Leuven
+  place: Leuven, Belgium
+  type: collaborator
+  lat: 50.877
+  lng: 4.7
+  people: Tomas Norton · Royal Society exchange on livestock robotics (2026)
+- name: Washington State University
+  place: Pullman, Washington, USA
+  type: collaborator
+  lat: 46.731
+  lng: -117.161
+  people: Manoj Karkee, Qin Zhang
 - name: University of Lincoln
   place: Lincoln, UK
   type: alumni
-  lat: 53.2280
-  lng: -0.5480
+  lat: 53.228
+  lng: -0.548
   people: Dr Leonardo Guevara
-
 - name: Universidad Católica del Norte
   place: Antofagasta, Chile
   type: alumni
-  lat: -23.6800
-  lng: -70.4100
+  lat: -23.68
+  lng: -70.41
   people: Dr Álvaro Javier Prado, Dr Oswaldo Menéndez, Dr Robert Guamán
-
 - name: Escuela Politécnica Nacional
   place: Quito, Ecuador
   type: alumni
-  lat: -0.2100
-  lng: -78.4890
+  lat: -0.21
+  lng: -78.489
   people: Dr Michelle Viscaíno, Dr Juan Villacrés
-
 - name: Universidad Andrés Bello
   place: Santiago, Chile
   type: alumni
-  lat: -33.4350
-  lng: -70.6150
+  lat: -33.435
+  lng: -70.615
   people: Dr Juan Pablo Vásconez
-
 - name: Pontificia Universidad Católica de Chile (faculty)
   place: Santiago, Chile
   type: alumni
-  lat: -33.4990
-  lng: -70.6120
+  lat: -33.499
+  lng: -70.612
   people: Dr Tito Arévalo
-
 - name: Carnegie Mellon University (research)
   place: Pittsburgh, Pennsylvania, USA
   type: alumni
-  lat: 40.4400
-  lng: -79.9500
+  lat: 40.44
+  lng: -79.95
   people: Dr Francisco Yandún
