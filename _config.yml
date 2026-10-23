@@ -63,4 +63,4 @@ defaults:
 # ------------------------------------------------------------------
 # GoatCounter (private dashboard: visits, countries, pages, referrers; no cookies).
 # Sign up at https://www.goatcounter.com and put your site code here, e.g. "fauatcheein".
-goatcounter: ""
+goatcounter: "fauatcheein"
