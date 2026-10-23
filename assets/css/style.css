@@ -384,3 +384,4 @@ ul.plain ul { margin-top: .4em; }
   .visitors-grid { grid-template-columns: 1fr; }
   .visitor-map { height: 300px; }
 }
+.network-map.leaflet-container { background: color-mix(in srgb, var(--field) 4%, var(--surface)); }

@@ -19,7 +19,7 @@
 
 <script>
 (function () {
-  if (!window.L) return;
+  if (!window.L || !window.topojson) return;
   var places = {{ site.data.network | jsonify }};
   var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   var css = getComputedStyle(document.documentElement);
@@ -28,29 +28,41 @@
     collaborator: css.getPropertyValue('--robotics').trim() || '#1F4E8C',
     alumni: css.getPropertyValue('--remote').trim() || '#0E7187'
   };
-  var map = L.map('network-map', { scrollWheelZoom: false, worldCopyJump: true, minZoom: 1 }).setView([20, -10], 2);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/' + (dark ? 'dark_all' : 'light_all') + '/{z}/{x}/{y}{r}.png', {
-    subdomains: 'abcd', maxZoom: 12,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-  }).addTo(map);
-  var order = { alumni: 0, collaborator: 1, home: 2 };
-  places.sort(function (a, b) { return order[a.type] - order[b.type]; });
-  var bounds = [];
-  places.forEach(function (p) {
-    var m = L.circleMarker([p.lat, p.lng], {
-      radius: p.type === 'home' ? 9 : 7, color: dark ? '#0D1520' : '#fff', weight: 2,
-      fillColor: colour[p.type], fillOpacity: 0.95
+  var map = L.map('network-map', { scrollWheelZoom: false, attributionControl: false, minZoom: 0, maxZoom: 7, zoomSnap: 0.25 });
+
+  fetch('{{ "/assets/data/world-110m.json" | relative_url }}').then(function (r) { return r.json(); }).then(function (world) {
+    // world outline drawn from our own file: no map provider or API key needed
+    var geo = topojson.feature(world, world.objects.countries);
+    geo.features = geo.features.filter(function (f) { return f.properties.a2 !== 'AQ'; });
+    geo.features.forEach(function (f) {
+      var g = f.geometry; if (!g) return;
+      var polys = g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
+      polys.forEach(function (poly) { poly.forEach(function (ring) {
+        for (var i = 1; i < ring.length; i++) { var d = ring[i][0] - ring[i - 1][0]; if (d > 180) ring[i][0] -= 360; else if (d < -180) ring[i][0] += 360; }
+      }); });
+    });
+    var land = L.geoJSON(geo, {
+      interactive: false,
+      style: { fillColor: dark ? '#1C2A3D' : '#E3E9F0', fillOpacity: 1, color: dark ? '#0D1520' : '#FFFFFF', weight: 0.6 }
     }).addTo(map);
-    var html = '<strong>' + p.name + '</strong><br><span class="pop-place">' + p.place + '</span>' + (p.people ? '<br>' + p.people : '');
-    m.bindPopup(html);
-    m.bindTooltip(p.name, { direction: 'top', offset: [0, -6] });
-    bounds.push([p.lat, p.lng]);
-  });
-  map.fitBounds(bounds, { padding: [24, 24] });
-  // home institution lines: Harper Adams to every collaborator, drawn faintly
-  var hau = places.filter(function (p) { return p.name === 'Harper Adams University'; })[0];
-  if (hau) places.forEach(function (p) {
-    if (p.type === 'collaborator') L.polyline([[hau.lat, hau.lng], [p.lat, p.lng]], { color: colour.collaborator, weight: 1, opacity: 0.25, interactive: false }).addTo(map);
+    map.fitBounds(land.getBounds(), { padding: [4, 4] });
+
+    // faint lines from Harper Adams to each collaborator
+    var hau = places.filter(function (p) { return p.name === 'Harper Adams University'; })[0];
+    if (hau) places.forEach(function (p) {
+      if (p.type === 'collaborator') L.polyline([[hau.lat, hau.lng], [p.lat, p.lng]], { color: colour.collaborator, weight: 1, opacity: 0.3, interactive: false }).addTo(map);
+    });
+
+    var order = { alumni: 0, collaborator: 1, home: 2 };
+    places.sort(function (a, b) { return order[a.type] - order[b.type]; });
+    places.forEach(function (p) {
+      var m = L.circleMarker([p.lat, p.lng], {
+        radius: p.type === 'home' ? 8 : 6, color: dark ? '#0D1520' : '#fff', weight: 2,
+        fillColor: colour[p.type], fillOpacity: 1
+      }).addTo(map);
+      m.bindPopup('<strong>' + p.name + '</strong><br><span class="pop-place">' + p.place + '</span>' + (p.people ? '<br>' + p.people : ''));
+      m.bindTooltip(p.name, { direction: 'top', offset: [0, -6] });
+    });
   });
 })();
 </script>
