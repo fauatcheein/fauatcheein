@@ -12,7 +12,7 @@ intro: Researchers working with the group across Harper Adams University and Her
     <strong>{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</strong>
     <span>{{ m.role }}</span>
     {% if m.topic %}<span class="meta">{{ m.topic }}</span>{% endif %}
-    {% if m.email or m.linkedin or m.scholar or m.researchgate or m.orcid %}<span class="person-links">{% if m.email %}<a href="mailto:{{ m.email }}">Email</a>{% endif %}{% if m.linkedin %}<a href="{{ m.linkedin }}">LinkedIn</a>{% endif %}{% if m.scholar %}<a href="{{ m.scholar }}">Google Scholar</a>{% endif %}{% if m.researchgate %}<a href="{{ m.researchgate }}">ResearchGate</a>{% endif %}{% if m.orcid %}<a href="{{ m.orcid }}">ORCID</a>{% endif %}</span>{% endif %}
+    {% if m.email or m.website or m.profile or m.linkedin or m.scholar or m.researchgate or m.orcid %}<span class="person-links">{% if m.email %}<a href="mailto:{{ m.email }}">Email</a>{% endif %}{% if m.website %}<a href="{{ m.website }}">Website</a>{% endif %}{% if m.profile %}<a href="{{ m.profile }}">Staff profile</a>{% endif %}{% if m.linkedin %}<a href="{{ m.linkedin }}">LinkedIn</a>{% endif %}{% if m.scholar %}<a href="{{ m.scholar }}">Google Scholar</a>{% endif %}{% if m.researchgate %}<a href="{{ m.researchgate }}">ResearchGate</a>{% endif %}{% if m.orcid %}<a href="{{ m.orcid }}">ORCID</a>{% endif %}</span>{% endif %}
   </div>
   {% endfor %}
 </div>

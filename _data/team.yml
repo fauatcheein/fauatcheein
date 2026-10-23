@@ -1,5 +1,5 @@
 # Team — groups appear in this order. Fields per person: name, role (required);
-# optional: topic, url, email, linkedin, scholar, researchgate, orcid.
+# optional: topic, url, email, website, profile (staff page), linkedin, scholar, researchgate, orcid.
 # To add someone, copy a "- name:" block under the right group.
 
 - group: Group lead
@@ -52,14 +52,31 @@
       role: PhD 2023 · Assistant Professor, Escuela Politécnica Nacional, Quito; former postdoc, UC Davis
     - name: Dr. Juan Villacrés
       role: PhD 2022 · Assistant Professor, Escuela Politécnica Nacional, Quito; former postdoc, UC Davis
+      email: juan.villacres01@epn.edu.ec
+      website: "https://juanvillacres.github.io/"
+      linkedin: "https://www.linkedin.com/in/jvillacres/"
+      scholar: "https://scholar.google.com/citations?user=IKH-S98AAAAJ&hl=es"
+      researchgate: "https://www.researchgate.net/profile/Juan-Villacres-2"
     - name: Dr. Tito Arévalo
-      role: PhD 2022 · Assistant Professor, Pontificia Universidad Católica de Chile
+      role: PhD 2022 · Assistant Professor, Department of Electrical Engineering and Department of Mechanical and Metallurgical Engineering, Pontificia Universidad Católica de Chile
+      email: tito.arevalo@uc.cl
+      scholar: "https://scholar.google.com/citations?user=4IaLNTMAAAAJ&hl=es"
+      researchgate: "https://www.researchgate.net/profile/Tito-Arevalo-Ramirez"
     - name: Dr. Robert Guamán
-      role: PhD 2022 · Assistant Professor, Universidad Católica del Norte, Chile
+      role: PhD 2022 · Assistant Professor, Department of Systems and Computing Engineering, Universidad Católica del Norte, Chile
+      email: Robert.guaman@ucn.cl
+      linkedin: "https://www.linkedin.com/in/robert-guam%C3%A1n-526144146/"
+      scholar: "https://scholar.google.com/citations?user=f-QFj6QAAAAJ&hl=es"
+      researchgate: "https://www.researchgate.net/profile/Robert-Guaman-Rivera-2"
     - name: Dr. Leonardo Guevara
       role: PhD 2021 · Assistant Professor, University of Lincoln, UK
-    - name: Dr. Darío Guevara
-      role: PhD 2021 · Postdoc, UC Davis, and entrepreneur
+      email: LGuevara@lincoln.ac.uk
+      profile: "https://staff.lincoln.ac.uk/a304664e-6445-4f1e-b8ad-74fa88abc715"
+    - name: Dr. Darío Javier Guevara
+      role: PhD 2021 · Principal Engineer, Agscout
+      email: dario@agscout.ai
+      linkedin: "https://www.linkedin.com/in/dario-guevara/"
+      scholar: "https://scholar.google.com/citations?user=z6Qp2ogAAAAJ&hl=en"
     - name: Dr. Juan Pablo Vásconez
       role: PhD 2020 · Associate Professor, Universidad Andrés Bello, Chile
     - name: Dr. Francisco Yandún
