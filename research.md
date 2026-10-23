@@ -47,9 +47,7 @@ We release datasets and code where we can.
 
 ## Collaboration network
 
-We work with groups across Europe, the Americas, Asia and Australia, and our PhD graduates now lead research groups and engineering teams on three continents. Select a pin to see the institution and the people involved.
-
-{% include network-map.html %}
+We work with groups across Europe, the Americas, Asia and Australia, and our PhD graduates now lead research groups and engineering teams on three continents. See the [collaboration map and visitor statistics]({{ '/network/' | relative_url }}).
 
 ## Working with us
 

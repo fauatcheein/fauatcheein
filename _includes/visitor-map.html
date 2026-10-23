@@ -1,0 +1,88 @@
+{% assign v = site.data.visitors %}
+<figure class="visitors">
+  <div class="visitors-grid">
+    <div class="visitor-map-wrap">
+      <div id="visitor-map" class="visitor-map" role="img" aria-label="World map shaded by number of visits per country"></div>
+      {% if v.total == 0 %}<p class="visitor-empty">Visitor statistics will appear here once tracking has collected its first visits.</p>{% endif %}
+    </div>
+    <div class="visitor-side">
+      <p class="visitor-total"><strong>{{ v.total }}</strong><span>visits{% if v.since %} since {{ v.since | date: "%-d %B %Y" }}{% endif %}</span></p>
+      <p class="visitor-total"><strong id="visitor-ncountries">0</strong><span>countries</span></p>
+      <ol class="visitor-top" id="visitor-top"></ol>
+    </div>
+  </div>
+  <figcaption class="colour-bar">
+    <span class="colour-bar-label">Visits per country</span>
+    <span class="colour-bar-key" aria-hidden="true">
+      <span class="colour-bar-scale"></span>
+      <span class="colour-bar-ticks" id="visitor-ticks"><span>1</span><span></span></span>
+    </span>
+    {% if v.updated %}<span class="meta">Updated daily · last update {{ v.updated | date: "%-d %B %Y" }}</span>{% endif %}
+  </figcaption>
+</figure>
+
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script>
+(function () {
+  if (!window.L || !window.topojson) return;
+  var data = {{ site.data.visitors | jsonify }};
+  var counts = data.countries || {};
+  var names = data.names || {};
+  var max = Math.max(1, Math.max.apply(null, Object.values(counts).concat([0])));
+  var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  // sequential palette, light to deep blue (log scale, so a few visits still show)
+  var stops = dark ? ['#16324F', '#1F4E8C', '#3F7FC4', '#86B4EC', '#D2E6FB']
+                   : ['#D7E6F4', '#9DC0E3', '#5B92CB', '#2A65A8', '#103C73'];
+  function lerp(a, b, t) { return Math.round(a + (b - a) * t); }
+  function hex(h) { return [1, 3, 5].map(function (i) { return parseInt(h.substr(i, 2), 16); }); }
+  function colourFor(n) {
+    if (!n) return null;
+    var t = max === 1 ? 1 : Math.log(n) / Math.log(max);
+    var x = t * (stops.length - 1), i = Math.min(Math.floor(x), stops.length - 2), f = x - i;
+    var a = hex(stops[i]), b = hex(stops[i + 1]);
+    return 'rgb(' + lerp(a[0], b[0], f) + ',' + lerp(a[1], b[1], f) + ',' + lerp(a[2], b[2], f) + ')';
+  }
+  document.querySelector('.colour-bar-scale').style.background = 'linear-gradient(90deg,' + stops.join(',') + ')';
+  document.getElementById('visitor-ticks').lastElementChild.textContent = max.toLocaleString();
+  document.getElementById('visitor-ncountries').textContent = Object.keys(counts).length;
+
+  var map = L.map('visitor-map', { zoomControl: true, scrollWheelZoom: false, attributionControl: false, minZoom: 0, maxZoom: 5, worldCopyJump: false, zoomSnap: 0.25 });
+  var empty = dark ? '#22324A' : '#E3E9F0';
+  var line = dark ? '#0D1520' : '#FFFFFF';
+
+  fetch('{{ "/assets/data/world-110m.json" | relative_url }}').then(function (r) { return r.json(); }).then(function (world) {
+    var geo = topojson.feature(world, world.objects.countries);
+    geo.features = geo.features.filter(function (f) { return f.properties.a2 !== 'AQ'; });
+    // keep shapes that cross the 180° meridian (Russia, Fiji) continuous instead of wrapping
+    function unwrap(ring) { for (var i = 1; i < ring.length; i++) { var d = ring[i][0] - ring[i - 1][0]; if (d > 180) ring[i][0] -= 360; else if (d < -180) ring[i][0] += 360; } }
+    geo.features.forEach(function (f) {
+      var g = f.geometry; if (!g) return;
+      var polys = g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
+      polys.forEach(function (poly) { poly.forEach(unwrap); });
+    });
+    var layer = L.geoJSON(geo, {
+      style: function (f) {
+        var c = colourFor(counts[f.properties.a2]);
+        return { fillColor: c || empty, fillOpacity: 1, color: line, weight: 0.6 };
+      },
+      onEachFeature: function (f, l) {
+        var n = counts[f.properties.a2] || 0;
+        l.bindTooltip('<strong>' + f.properties.name + '</strong><br>' + n.toLocaleString() + (n === 1 ? ' visit' : ' visits'), { sticky: true });
+        l.on('mouseover', function () { l.setStyle({ weight: 1.6, color: dark ? '#E6ECF3' : '#0F1E2E' }); l.bringToFront(); });
+        l.on('mouseout', function () { layer.resetStyle(l); });
+      }
+    }).addTo(map);
+    map.fitBounds(layer.getBounds(), { padding: [4, 4] });
+  });
+
+  var top = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; }).slice(0, 10);
+  var ol = document.getElementById('visitor-top');
+  top.forEach(function (k) {
+    var li = document.createElement('li');
+    var pct = Math.max(4, Math.round(100 * counts[k] / max));
+    li.innerHTML = '<span class="vt-name">' + (names[k] || k) + '</span><span class="vt-bar"><i style="width:' + pct + '%;background:' + colourFor(counts[k]) + '"></i></span><span class="vt-n">' + counts[k].toLocaleString() + '</span>';
+    ol.appendChild(li);
+  });
+})();
+</script>

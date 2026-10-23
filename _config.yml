@@ -31,6 +31,7 @@ nav:
   - { title: Research, url: "/research/" }
   - { title: Publications, url: "/publications/" }
   - { title: Team, url: "/team/" }
+  - { title: Network, url: "/network/" }
   - { title: CV, url: "/cv/" }
   - { title: News, url: "/news/" }
 
@@ -49,6 +50,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor
+  - scripts
 
 # Preview image shown when the site is shared on LinkedIn, X, etc.
 defaults:

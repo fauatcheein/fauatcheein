@@ -353,3 +353,34 @@ ul.plain ul { margin-top: .4em; }
 .leaflet-popup-content { font-size: .9rem; line-height: 1.45; }
 .leaflet-popup-content .pop-place { color: #55667A; }
 @media (max-width: 600px) { .network-map { height: 340px; } }
+
+/* ------------------------------------------------------------------ visitor map */
+.visitors { margin: 8px 0 24px; max-width: 1120px; }
+.visitors-grid { display: grid; grid-template-columns: minmax(0, 2.6fr) minmax(220px, 1fr); gap: 24px; align-items: start; }
+.visitor-map-wrap { position: relative; }
+.visitor-map { height: 440px; border: 1px solid var(--rule); border-radius: 3px; background: var(--surface); z-index: 0; }
+.visitor-empty {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 500; margin: 0;
+  max-width: 34ch; text-align: center; font-size: 1rem; padding: 12px 16px;
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 3px; box-shadow: 0 2px 10px rgba(15, 30, 46, .08);
+}
+.visitor-total { margin: 0 0 14px; }
+.visitor-total strong { display: block; font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 2rem; line-height: 1.05; color: var(--field); font-variant-numeric: tabular-nums; }
+.visitor-total span { font-size: .95rem; color: var(--muted); }
+.visitor-top { list-style: none; padding: 0; margin: 8px 0 0; font-size: .95rem; }
+.visitor-top li { display: grid; grid-template-columns: minmax(0, 7.5rem) 1fr auto; gap: 8px; align-items: center; padding: 4px 0; }
+.vt-name { font-family: var(--display); font-weight: 500; font-size: .85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vt-bar { height: 8px; background: var(--rule); border-radius: 4px; overflow: hidden; }
+.vt-bar i { display: block; height: 100%; border-radius: 4px; }
+.vt-n { font-family: var(--display); font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.colour-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; margin-top: 12px; font-family: var(--display); font-size: .85rem; color: var(--muted); }
+.colour-bar-label { font-weight: 600; color: var(--ink); }
+.colour-bar-key { display: inline-flex; flex-direction: column; gap: 3px; width: 220px; }
+.colour-bar-scale { display: block; height: 10px; border-radius: 5px; border: 1px solid var(--rule); }
+.colour-bar-ticks { display: flex; justify-content: space-between; font-size: .78rem; font-variant-numeric: tabular-nums; }
+.visitor-map.leaflet-container, .network-map.leaflet-container { background: var(--surface); }
+.visitor-map.leaflet-container { background: color-mix(in srgb, var(--field) 4%, var(--surface)); }
+@media (max-width: 760px) {
+  .visitors-grid { grid-template-columns: 1fr; }
+  .visitor-map { height: 300px; }
+}
