@@ -336,3 +336,20 @@ ul.plain ul { margin-top: .4em; }
 .chip { border-radius: 16px; }
 .filter-status[class*="area-"] { border-left-color: var(--area); }
 .chip-all[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+
+/* ------------------------------------------------------------------ collaboration map */
+.network { margin: 8px 0 12px; max-width: 1120px; }
+.network-map { height: 460px; border: 1px solid var(--rule); border-radius: 3px; background: var(--surface); z-index: 0; }
+.network-legend { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 10px; font-family: var(--display); font-weight: 500; font-size: .88rem; color: var(--muted); }
+.network-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--rule); }
+.dot-home { background: var(--signal); }
+.dot-collaborator { background: var(--robotics); }
+.dot-alumni { background: var(--remote); }
+.network-list { margin: 0 0 24px; font-size: 1rem; max-width: 900px; }
+.network-list summary { cursor: pointer; font-family: var(--display); font-weight: 600; color: var(--field); }
+.network-list ul { margin-top: 10px; }
+.leaflet-container { font-family: var(--display); }
+.leaflet-popup-content { font-size: .9rem; line-height: 1.45; }
+.leaflet-popup-content .pop-place { color: #55667A; }
+@media (max-width: 600px) { .network-map { height: 340px; } }

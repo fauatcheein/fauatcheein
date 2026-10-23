@@ -1,0 +1,174 @@
+# Collaboration network shown on the map on the Research page.
+# type: home | collaborator | alumni   (sets the pin colour)
+# lat / lng: decimal degrees (right-click a place in Google Maps to copy them)
+# people: optional, shown in the pop-up
+
+- name: Harper Adams University
+  place: Newport, Shropshire, UK
+  type: home
+  lat: 52.7792
+  lng: -2.4270
+  people: Harper Institute of Technology
+
+- name: Heriot-Watt University and the National Robotarium
+  place: Edinburgh, UK
+  type: home
+  lat: 55.9095
+  lng: -3.3200
+  people: Former post (2022–2024); current PhD researchers
+
+- name: Universidad Técnica Federico Santa María
+  place: Valparaíso, Chile
+  type: home
+  lat: -33.0350
+  lng: -71.5960
+  people: Former post (2011–2026)
+
+# ---------------------------------------------------------------- collaborators
+- name: Politecnico di Bari
+  place: Bari, Italy
+  type: collaborator
+  lat: 41.1090
+  lng: 16.8790
+  people: Giulio Reina
+
+- name: Universitat de Lleida
+  place: Lleida, Spain
+  type: collaborator
+  lat: 41.6160
+  lng: 0.6230
+  people: Joan Ramon Rosell Polo, Ricardo Sanz, Jordi Gené, Eduard Gregorio, Alexandre Escolà
+
+- name: Poznan University of Technology
+  place: Poznań, Poland
+  type: collaborator
+  lat: 52.4040
+  lng: 16.9500
+  people: Maciej Michałek
+
+- name: University of Ljubljana
+  place: Ljubljana, Slovenia
+  type: collaborator
+  lat: 46.0500
+  lng: 14.4690
+  people: Sašo Blažič
+
+- name: KU Leuven
+  place: Leuven, Belgium
+  type: collaborator
+  lat: 50.8770
+  lng: 4.7000
+  people: Tomas Norton · Royal Society exchange on livestock robotics
+
+- name: Universidade do Porto
+  place: Porto, Portugal
+  type: collaborator
+  lat: 41.1780
+  lng: -8.5960
+  people: Fernando Lobo Pereira
+
+- name: University of California, Davis
+  place: Davis, California, USA
+  type: collaborator
+  lat: 38.5380
+  lng: -121.7620
+  people: Stavros Vougioukas
+
+- name: Carnegie Mellon University
+  place: Pittsburgh, Pennsylvania, USA
+  type: collaborator
+  lat: 40.4430
+  lng: -79.9430
+  people: George Kantor
+
+- name: Washington State University
+  place: Pullman, Washington, USA
+  type: collaborator
+  lat: 46.7310
+  lng: -117.1610
+  people: Manoj Karkee, Qin Zhang
+
+- name: Pontificia Universidad Católica de Chile
+  place: Santiago, Chile
+  type: collaborator
+  lat: -33.4410
+  lng: -70.6400
+  people: Miguel Torres Torriti
+
+- name: Universidad de los Andes
+  place: Santiago, Chile
+  type: collaborator
+  lat: -33.4020
+  lng: -70.5070
+  people: José Delpiano
+
+- name: Universidade Federal and Instituto Federal do Espírito Santo
+  place: Vitória, Brazil
+  type: collaborator
+  lat: -20.2770
+  lng: -40.3030
+  people: Alberto de Souza, Filipe Müller, Teodiano Freire Bastos-Filho
+
+- name: Universidad Nacional de San Juan
+  place: San Juan, Argentina
+  type: collaborator
+  lat: -31.5370
+  lng: -68.5360
+  people: Ricardo Carelli · where I completed my MSc and PhD
+
+- name: Northwest A&F University
+  place: Yangling, China
+  type: collaborator
+  lat: 34.2670
+  lng: 108.0670
+  people: Longsheng Fu
+
+- name: UNSW Sydney
+  place: Sydney, Australia
+  type: collaborator
+  lat: -33.9170
+  lng: 151.2310
+  people: José Guivant
+
+# ---------------------------------------------------------------- where our PhD graduates work
+- name: University of Lincoln
+  place: Lincoln, UK
+  type: alumni
+  lat: 53.2280
+  lng: -0.5480
+  people: Dr Leonardo Guevara
+
+- name: Universidad Católica del Norte
+  place: Antofagasta, Chile
+  type: alumni
+  lat: -23.6800
+  lng: -70.4100
+  people: Dr Álvaro Javier Prado, Dr Oswaldo Menéndez, Dr Robert Guamán
+
+- name: Escuela Politécnica Nacional
+  place: Quito, Ecuador
+  type: alumni
+  lat: -0.2100
+  lng: -78.4890
+  people: Dr Michelle Viscaíno, Dr Juan Villacrés
+
+- name: Universidad Andrés Bello
+  place: Santiago, Chile
+  type: alumni
+  lat: -33.4350
+  lng: -70.6150
+  people: Dr Juan Pablo Vásconez
+
+- name: Pontificia Universidad Católica de Chile (faculty)
+  place: Santiago, Chile
+  type: alumni
+  lat: -33.4990
+  lng: -70.6120
+  people: Dr Tito Arévalo
+
+- name: Carnegie Mellon University (research)
+  place: Pittsburgh, Pennsylvania, USA
+  type: alumni
+  lat: 40.4400
+  lng: -79.9500
+  people: Dr Francisco Yandún

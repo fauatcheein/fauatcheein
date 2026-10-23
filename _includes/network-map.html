@@ -1,0 +1,58 @@
+{% assign home = site.data.network | where: "type", "home" %}
+{% assign collab = site.data.network | where: "type", "collaborator" %}
+{% assign alumni = site.data.network | where: "type", "alumni" %}
+<figure class="network">
+  <div id="network-map" class="network-map" role="region" aria-label="World map of collaborating institutions"></div>
+  <figcaption class="network-legend">
+    <span><i class="dot dot-home"></i>Where I work and have worked ({{ home | size }})</span>
+    <span><i class="dot dot-collaborator"></i>Collaborating institutions ({{ collab | size }})</span>
+    <span><i class="dot dot-alumni"></i>Where our PhD graduates work ({{ alumni | size }})</span>
+  </figcaption>
+</figure>
+<details class="network-list">
+  <summary>List of institutions</summary>
+  <ul>
+    {% for n in site.data.network %}<li><strong>{{ n.name }}</strong>, {{ n.place }}{% if n.people %} · {{ n.people }}{% endif %}</li>
+    {% endfor %}
+  </ul>
+</details>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+(function () {
+  if (!window.L) return;
+  var places = {{ site.data.network | jsonify }};
+  var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var css = getComputedStyle(document.documentElement);
+  var colour = {
+    home: css.getPropertyValue('--signal').trim() || '#F2A900',
+    collaborator: css.getPropertyValue('--robotics').trim() || '#1F4E8C',
+    alumni: css.getPropertyValue('--remote').trim() || '#0E7187'
+  };
+  var map = L.map('network-map', { scrollWheelZoom: false, worldCopyJump: true, minZoom: 1 }).setView([20, -10], 2);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/' + (dark ? 'dark_all' : 'light_all') + '/{z}/{x}/{y}{r}.png', {
+    subdomains: 'abcd', maxZoom: 12,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+  }).addTo(map);
+  var order = { alumni: 0, collaborator: 1, home: 2 };
+  places.sort(function (a, b) { return order[a.type] - order[b.type]; });
+  var bounds = [];
+  places.forEach(function (p) {
+    var m = L.circleMarker([p.lat, p.lng], {
+      radius: p.type === 'home' ? 9 : 7, color: dark ? '#0D1520' : '#fff', weight: 2,
+      fillColor: colour[p.type], fillOpacity: 0.95
+    }).addTo(map);
+    var html = '<strong>' + p.name + '</strong><br><span class="pop-place">' + p.place + '</span>' + (p.people ? '<br>' + p.people : '');
+    m.bindPopup(html);
+    m.bindTooltip(p.name, { direction: 'top', offset: [0, -6] });
+    bounds.push([p.lat, p.lng]);
+  });
+  map.fitBounds(bounds, { padding: [24, 24] });
+  // home institution lines: Harper Adams to every collaborator, drawn faintly
+  var hau = places.filter(function (p) { return p.name === 'Harper Adams University'; })[0];
+  if (hau) places.forEach(function (p) {
+    if (p.type === 'collaborator') L.polyline([[hau.lat, hau.lng], [p.lat, p.lng]], { color: colour.collaborator, weight: 1, opacity: 0.25, interactive: false }).addTo(map);
+  });
+})();
+</script>

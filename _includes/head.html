@@ -7,3 +7,4 @@
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
 {% feed_meta %}
+{% if site.goatcounter and site.goatcounter != "" %}<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>{% endif %}

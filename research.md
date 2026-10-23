@@ -45,9 +45,11 @@ We release datasets and code where we can.
 - **LFuji-air dataset**: annotated 3D LiDAR point clouds of Fuji apple trees under forced air flow. [Data in Brief, 2020](https://doi.org/10.1016/j.dib.2020.105248)
 - **ForestYear3D**: multi-season LiDAR forest dataset collected with a mobile robot platform *(coming soon)*.
 
-## Collaborators
+## Collaboration network
 
-We work with groups across Europe, the Americas and Asia, including Politecnico di Bari, Universitat de Lleida, Poznan University of Technology and the University of Ljubljana in Europe; UC Davis, Carnegie Mellon University and Washington State University in the USA; Pontificia Universidad Católica de Chile, Universidad de los Andes (Chile), and the Federal University and Federal Institute of Espírito Santo (Brazil) in South America; and Northwest A&F University in China.
+We work with groups across Europe, the Americas, Asia and Australia, and our PhD graduates now lead research groups and engineering teams on three continents. Select a pin to see the institution and the people involved.
+
+{% include network-map.html %}
 
 ## Working with us
 
