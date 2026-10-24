@@ -10,8 +10,10 @@
 
 - group: Postdoctoral researchers
   members:
-    - name: Dr. Nahuel Deniz
+    - name: Dr. Nestor Nahuel Deniz
       role: Postdoctoral researcher
+      linkedin: "https://www.linkedin.com/in/nestor-nahuel-deniz-b4065862/"
+      scholar: "https://scholar.google.com/citations?user=F7KkYr4AAAAJ&hl=en"
 
 - group: PhD researchers
   members:
