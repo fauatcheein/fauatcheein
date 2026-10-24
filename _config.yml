@@ -51,6 +51,7 @@ exclude:
   - README.md
   - vendor
   - scripts
+  - docs
 
 # Preview image shown when the site is shared on LinkedIn, X, etc.
 defaults:

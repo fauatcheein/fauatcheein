@@ -1,71 +1,84 @@
-# Slides for the presentation on the home page, shown in this order.
-# Fields: kicker (small line above the title), title, text, points (list), image, link, link_text,
-#         style: photo | image | numbers | timeline | default
-#         numbers: list of {value, label}    steps: list of {years, place}
+# Slides for the presentation on the home page, in order. Built from docs/presentation-prompt.md.
+# Rules: one message per slide, title states the message, max ~30 words of text, max 4 items.
+# Fields: style (photo | image | pillars | timeline | big | chips | numbers | default), kicker, title,
+#         text, points, numbers [{value,label}], steps [{years,place}], big {value,label}, chips,
+#         image, link, link_text. Each slide stays on screen long enough to read its words.
 
 - style: photo
-  kicker: Who I am
-  title: Fernando Auat Cheein
-  text: Professor of Engineering and Director of the Harper Institute of Technology at Harper Adams University, UK.
+  kicker: Fernando Auat Cheein
+  title: Robots and AI that farmers can trust
+  text: Professor of Engineering and Director of the Harper Institute of Technology, Harper Adams University, UK.
   image: /assets/img/profile.jpg
 
 - style: image
-  kicker: The mission
-  title: Robots, AI and digital twins for the farms of the future
-  text: Machines that perceive, decide, and can be shown to be safe in real fields, from orchards and arable land to livestock.
+  kicker: Why it matters
+  title: Farm machines must see, decide and stay safe
+  text: We build perception, autonomy and safety assurance for robots working in real orchards, fields and farms.
   image: /assets/img/robot-apple.jpg
 
-- style: default
-  kicker: Three pillars
-  title: The Harper Institute of Technology
+- style: pillars
+  kicker: How we work
+  title: Three pillars, one goal
   points:
-    - "Digital Twinning: probabilistic models of machines, crops and fields that support decisions and safety assurance"
-    - "Artificial Intelligence: perception that keeps working outdoors, from LiDAR to hyperspectral and satellite imagery"
-    - "Robotics: autonomous vehicles and manipulators for agriculture and forestry"
+    - "Digital Twinning: live models of machines, crops and fields"
+    - "Artificial Intelligence: perception that works outdoors"
+    - "Robotics: autonomous vehicles and manipulators"
 
 - style: timeline
   kicker: Career
-  title: Two decades across three continents
+  title: Two decades, three countries
   steps:
-    - { years: "2002–2011", place: "National University of San Juan, Argentina · MSc, PhD and postdoc in control systems and robotics" }
-    - { years: "2011–2026", place: "Universidad Técnica Federico Santa María, Chile · from researcher to full professor" }
-    - { years: "2022–2024", place: "Heriot-Watt University and the National Robotarium, UK" }
-    - { years: "2024–", place: "Harper Adams University, UK · Director, Harper Institute of Technology" }
+    - { years: "2002–2011", place: "San Juan, Argentina · MSc, PhD, postdoc" }
+    - { years: "2011–2026", place: "UTFSM, Chile · up to full professor" }
+    - { years: "2022–2024", place: "Heriot-Watt and National Robotarium, UK" }
+    - { years: "2024–", place: "Harper Adams, UK · Director, HIT" }
 
 - style: default
-  kicker: Research highlights
-  title: What we work on now
+  kicker: Research now
+  title: From orchards to food quality
   points:
-    - "SLAM and navigation for legged and wheeled robots in orchards"
-    - "Selective laser weeding with real-time tracking"
-    - "Spectral sensing of crop water stress, nutrients and food quality"
-    - "Safety certification of autonomous machinery (ISO 18497, ISO 25119)"
+    - "SLAM for legged robots in orchards"
+    - "Selective laser weeding"
+    - "Spectral sensing of crop water stress"
+    - "Safety certification (ISO 18497, ISO 25119)"
   link: /research/
   link_text: Explore the research
 
-- style: numbers
-  kicker: Impact
-  title: Research that travels
-  numbers:
-    - { value: "200+", label: "peer-reviewed papers" }
-    - { value: "4,200+", label: "citations" }
-    - { value: "35 / 42", label: "h-index, Scopus / Google Scholar" }
-    - { value: "Top 2%", label: "Stanford/Elsevier scientists, 2023–2026" }
-  text: Cited in patents by Honda, Sony and Stiga, and in policy documents from the UK Government, the European Parliamentary Research Service and the FAO.
+- style: big
+  kicker: Invention
+  title: Ideas protected, ideas used
+  big: { value: "24", label: "patent publications in the US, Europe and Latin America" }
+  points:
+    - "Granted: US 10,464,229 B2 · US 12,158,015 B2 · EP 3 272 478 B1"
+    - "Five IEEE Chile national innovation awards"
+
+- style: chips
+  kicker: Industry uptake
+  title: Industry builds on our research
+  big: { value: "11", label: "patents by companies and universities cite our work" }
+  chips: [Honda, Sony, Stiga, Agreenculture, University of California, Florida A&M]
+
+- style: chips
+  kicker: Policy impact
+  title: Our research informs policy
+  big: { value: "22", label: "policy documents cite our work worldwide" }
+  chips: [UK Government, European Parliamentary Research Service, FAO, EU-OSHA, EMBRAPA]
 
 - style: numbers
-  kicker: People and partners
-  title: A global network
+  kicker: Scale
+  title: A track record that travels
   numbers:
-    - { value: "13", label: "PhD graduates, now in academia and industry" }
-    - { value: "73", label: "collaborating institutions" }
-    - { value: "21", label: "countries" }
+    - { value: "200+", label: "peer-reviewed papers" }
+    - { value: "35 / 42", label: "h-index, Scopus / Scholar" }
+    - { value: "13", label: "PhD graduates" }
+    - { value: "21", label: "countries of partners" }
+  text: Stanford/Elsevier Top 2% Scientists, 2023–2026.
   link: /network/
-  link_text: See the collaboration map
+  link_text: See the network
 
 - style: default
   kicker: Work with us
   title: Join the Harper Institute of Technology
-  text: We welcome prospective PhD students, postdocs, fellowship candidates and industry partners in agricultural robotics and AI.
+  text: PhD students, postdocs, fellows and industry partners in agricultural robotics and AI are welcome.
   link: /#contact
   link_text: Get in touch

@@ -1,27 +1,32 @@
-<section class="deck" aria-roledescription="carousel" aria-label="A short presentation about Fernando Auat Cheein">
+{% assign total = site.data.slides | size %}
+<section class="deck" aria-roledescription="carousel" aria-label="Fernando Auat Cheein in two minutes">
   <div class="deck-stage">
     {% for s in site.data.slides %}
-    <article class="slide slide-{{ s.style | default: 'default' }}{% if forloop.first %} is-active{% endif %}" role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} of {{ site.data.slides | size }}"{% unless forloop.first %} aria-hidden="true"{% endunless %}>
+    <article class="slide slide--{{ s.style | default: 'default' }}{% if forloop.first %} is-active{% endif %}" role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} of {{ total }}"{% unless forloop.first %} aria-hidden="true"{% endunless %}>
       {% if s.style == "image" %}<img class="slide-bg" src="{{ s.image | relative_url }}" alt="" loading="lazy">{% endif %}
       <div class="slide-body">
         {% if s.kicker %}<p class="slide-kicker">{{ s.kicker }}</p>{% endif %}
         <h2 class="slide-title">{{ s.title }}</h2>
-        {% if s.text %}<p class="slide-text">{{ s.text }}</p>{% endif %}
-        {% if s.points %}<ul class="slide-points">{% for p in s.points %}<li>{{ p }}</li>{% endfor %}</ul>{% endif %}
+        {% if s.big %}<p class="slide-big"><strong>{{ s.big.value }}</strong><span>{{ s.big.label }}</span></p>{% endif %}
+        {% if s.text and s.style != "numbers" %}<p class="slide-text">{{ s.text }}</p>{% endif %}
+        {% if s.points %}<ul class="slide-points">{% for p in s.points %}{% assign parts = p | split: ": " %}<li>{% if parts.size > 1 %}<b>{{ parts[0] }}</b> {{ p | remove_first: parts[0] | remove_first: ": " }}{% else %}{{ p }}{% endif %}</li>{% endfor %}</ul>{% endif %}
+        {% if s.chips %}<ul class="slide-orgs">{% for c in s.chips %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
         {% if s.steps %}<ol class="slide-steps">{% for st in s.steps %}<li><span>{{ st.years }}</span>{{ st.place }}</li>{% endfor %}</ol>{% endif %}
         {% if s.numbers %}<div class="slide-numbers">{% for n in s.numbers %}<p><strong>{{ n.value }}</strong><span>{{ n.label }}</span></p>{% endfor %}</div>{% endif %}
+        {% if s.text and s.style == "numbers" %}<p class="slide-text slide-note">{{ s.text }}</p>{% endif %}
         {% if s.link %}<p class="slide-link"><a href="{{ s.link | relative_url }}">{{ s.link_text }}</a></p>{% endif %}
       </div>
-      {% if s.style == "photo" %}<img class="slide-portrait" src="{{ s.image | relative_url }}" alt="Portrait of {{ s.title }}" loading="lazy">{% endif %}
+      {% if s.style == "photo" %}<img class="slide-portrait" src="{{ s.image | relative_url }}" alt="Portrait of Fernando Auat Cheein" loading="lazy">{% endif %}
     </article>
     {% endfor %}
   </div>
   <div class="deck-controls">
     <button class="deck-btn" type="button" data-dir="-1" aria-label="Previous slide">‹</button>
-    <div class="deck-dots" role="tablist">
-      {% for s in site.data.slides %}<button type="button" class="deck-dot{% if forloop.first %} is-active{% endif %}" data-go="{{ forloop.index0 }}" aria-label="Slide {{ forloop.index }}: {{ s.kicker | default: s.title }}"></button>{% endfor %}
-    </div>
+    <span class="deck-count" aria-live="polite"><b>1</b> / {{ total }}</span>
     <button class="deck-btn" type="button" data-dir="1" aria-label="Next slide">›</button>
+    <div class="deck-dots">
+      {% for s in site.data.slides %}<button type="button" class="deck-dot{% if forloop.first %} is-active{% endif %}" data-go="{{ forloop.index0 }}" aria-label="Go to slide {{ forloop.index }}: {{ s.kicker | default: s.title }}"></button>{% endfor %}
+    </div>
     <button class="deck-btn deck-play" type="button" aria-label="Pause presentation">❚❚</button>
   </div>
   <div class="deck-progress" aria-hidden="true"><i></i></div>
@@ -32,15 +37,20 @@
   var deck = document.querySelector('.deck'); if (!deck) return;
   var slides = deck.querySelectorAll('.slide'), dots = deck.querySelectorAll('.deck-dot');
   var bar = deck.querySelector('.deck-progress i'), play = deck.querySelector('.deck-play');
-  var DURATION = 7000, i = 0, t0 = performance.now(), paused = false, hover = false;
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) paused = true;
+  var count = deck.querySelector('.deck-count b');
+  // reading time: 3.5 s to orient + 0.3 s per word, between 6 and 14 s
+  var durations = Array.prototype.map.call(slides, function (s) {
+    var words = (s.querySelector('.slide-body').textContent.match(/\S+/g) || []).length;
+    return Math.min(14000, Math.max(6000, 3500 + 300 * words));
+  });
+  var i = 0, elapsed = 0, last = performance.now(), paused = false, hold = false;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) paused = true;
 
   function show(n) {
     i = (n + slides.length) % slides.length;
     slides.forEach(function (s, k) { s.classList.toggle('is-active', k === i); s.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
     dots.forEach(function (d, k) { d.classList.toggle('is-active', k === i); });
-    t0 = performance.now();
+    count.textContent = i + 1; elapsed = 0; bar.style.width = '0%';
   }
   function setPaused(p) {
     paused = p; play.textContent = p ? '▶' : '❚❚';
@@ -49,23 +59,26 @@
   setPaused(paused);
   deck.querySelectorAll('[data-dir]').forEach(function (b) { b.addEventListener('click', function () { show(i + (+b.dataset.dir)); }); });
   dots.forEach(function (d) { d.addEventListener('click', function () { show(+d.dataset.go); }); });
-  play.addEventListener('click', function () { setPaused(!paused); t0 = performance.now(); });
-  deck.addEventListener('mouseenter', function () { hover = true; });
-  deck.addEventListener('mouseleave', function () { hover = false; t0 = performance.now() - (parseFloat(bar.style.width) || 0) / 100 * DURATION; });
-  deck.addEventListener('focusin', function () { hover = true; });
-  deck.addEventListener('focusout', function () { hover = false; });
+  play.addEventListener('click', function () { setPaused(!paused); });
+  deck.addEventListener('mouseenter', function () { hold = true; });
+  deck.addEventListener('mouseleave', function () { hold = false; });
+  deck.addEventListener('focusin', function () { hold = true; });
+  deck.addEventListener('focusout', function () { hold = false; });
   deck.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') show(i + 1); if (e.key === 'ArrowLeft') show(i - 1); });
-  // swipe on phones
   var x0 = null;
   deck.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
   deck.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1)); x0 = null; });
 
+  // only run while the presentation is on screen
+  var visible = true;
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }, { threshold: 0.4 }).observe(deck);
+
   function tick(now) {
-    if (paused || hover || document.hidden) { t0 = now - (parseFloat(bar.style.width) || 0) / 100 * DURATION; }
-    else {
-      var f = (now - t0) / DURATION;
-      if (f >= 1) { show(i + 1); f = 0; }
-      bar.style.width = (f * 100) + '%';
+    var dt = now - last; last = now;
+    if (!paused && !hold && visible && !document.hidden) {
+      elapsed += dt;
+      if (elapsed >= durations[i]) show(i + 1);
+      bar.style.width = Math.min(100, elapsed / durations[i] * 100) + '%';
     }
     requestAnimationFrame(tick);
   }
