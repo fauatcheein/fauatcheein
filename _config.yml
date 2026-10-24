@@ -32,6 +32,7 @@ nav:
   - { title: Publications, url: "/publications/" }
   - { title: Team, url: "/team/" }
   - { title: Network, url: "/network/" }
+  - { title: Videos, url: "/videos/" }
   - { title: CV, url: "/cv/" }
   - { title: News, url: "/news/" }
 

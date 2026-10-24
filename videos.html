@@ -1,0 +1,49 @@
+---
+layout: page
+title: Videos
+permalink: /videos/
+intro: Research videos from the GRAI group at Universidad Técnica Federico Santa María (UTFSM), Chile, newest first. Each video lists the publication it presents, with its DOI, so the work can be cited.
+---
+<p class="video-channel">All videos are on the <a href="https://www.youtube.com/@graiutfsm6837">GRAI UTFSM YouTube channel</a>. Videos play here in YouTube's privacy-enhanced mode; nothing loads from YouTube until you press play.</p>
+
+<ol class="videos">
+  {% for v in site.data.videos %}
+  <li class="video" id="v-{{ v.id }}">
+    <div class="video-frame">
+      <button type="button" class="video-play" data-id="{{ v.id }}" aria-label="Play video: {{ v.title }}">
+        <img src="https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+        <span class="video-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="video-body">
+      <p class="video-date"><time datetime="{{ v.date }}">{{ v.date | date: "%-d %B %Y" }}</time></p>
+      <h2 class="video-title">{{ v.title }}</h2>
+      <p class="video-summary">{{ v.summary }}</p>
+      {% if v.papers.size > 0 %}
+      <ul class="video-papers">
+        {% for p in v.papers %}
+        <li><span class="video-kind">{% if p.kind == "main" %}Paper{% else %}Related{% endif %}</span> {{ p.title }}. <em>{{ p.venue }}</em>, {{ p.year }}. <a href="https://doi.org/{{ p.doi }}">doi:{{ p.doi }}</a></li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="video-papers-none">No journal paper linked to this video yet.</p>
+      {% endif %}
+      <p class="video-yt"><a href="https://www.youtube.com/watch?v={{ v.id }}">Watch on YouTube</a></p>
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+
+<script>
+document.querySelectorAll('.video-play').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.id + '?autoplay=1&rel=0';
+    f.title = b.getAttribute('aria-label').replace('Play video: ', '');
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    b.replaceWith(f);
+    f.focus();
+  });
+});
+</script>
