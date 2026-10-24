@@ -519,3 +519,14 @@ ul.plain ul { margin-top: .4em; }
 .video-papers-none { font-size: .93rem; color: var(--muted); font-style: italic; }
 .video-yt { font-size: .9rem; margin: 0; }
 @media (max-width: 760px) { .video { grid-template-columns: 1fr; gap: 1rem; } }
+.vfields { margin: 2rem 0 3rem; }
+.vfields h2, .videos-h { font-size: 1.4rem; margin: 0 0 1rem; }
+.vfields-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; }
+.vfield { background: var(--surface); border: 1px solid var(--rule); border-top: 3px solid var(--agri); border-radius: 6px; padding: 1.1rem 1.2rem; scroll-margin-top: 80px; }
+.vfield h3 { font-size: 1.05rem; margin: 0 0 .5rem; }
+.vfield p { font-size: .95rem; margin: 0 0 .75rem; }
+.vfield-videos { margin: 0; padding-left: 1.1rem; font-size: .88rem; display: grid; gap: .25rem; }
+.video { scroll-margin-top: 80px; }
+.video-date a { color: var(--agri); text-decoration: none; }
+.video-date a:hover { text-decoration: underline; }
+@media (max-width: 420px) { .vfields-grid { grid-template-columns: 1fr; } }

@@ -2,6 +2,7 @@
 # kind: main = the paper this video presents; related = a follow-up or closely related paper.
 
 - id: LciAt1XAlrY
+  field: vision
   title: Avocado detection in the field (Faster R-CNN test)
   date: '2019-10-10'
   summary: Test run of a Faster R-CNN detector finding avocados on the tree, part of a comparison of deep-learning detectors for fruit detection and counting.
@@ -12,6 +13,7 @@
     year: 2020
     kind: main
 - id: Hv9Mdi4V5xI
+  field: vision
   title: Lemon detection in the field (SSD test)
   date: '2019-10-10'
   summary: Test run of a Single Shot MultiBox Detector (SSD) finding lemons in the canopy, from the same fruit-detection comparison.
@@ -22,6 +24,7 @@
     year: 2020
     kind: main
 - id: wBTEACH_rjo
+  field: vision
   title: Apple detection in the orchard (SSD test)
   date: '2019-10-10'
   summary: Test run of an SSD detector finding apples in an orchard, from the same fruit-detection comparison.
@@ -32,11 +35,13 @@
     year: 2020
     kind: main
 - id: GOeXZcA7PDo
+  field: localization
   title: Visual localization for agricultural GNSS-denied environments
   date: '2018-09-11'
   summary: An empirical comparison of visual odometry, photogrammetry, IMU and wheel odometry for positioning field machines where satellite signals are unreliable.
   papers: []
 - id: EUY1Digx9GE
+  field: terrain
   title: Tuning of trajectory tracking controllers
   date: '2018-09-10'
   summary: Field tests of a tracking controller whose gains are generated with Monte Carlo methods, selected by Expectation Maximization and switched online as the terrain changes.
@@ -52,6 +57,7 @@
     year: 2018
     kind: related
 - id: 4YVpozwggI4
+  field: terrain
   title: Traction control of a skid-steer mobile robot
   date: '2018-09-10'
   summary: Bi-directional traction control on slippery ground using robust (tube-based) nonlinear model predictive control that keeps the robot within safe bounds despite uncertain dynamics.
@@ -67,6 +73,7 @@
     year: 2021
     kind: related
 - id: DOUOuEvS3h4
+  field: terrain
   title: Probabilistic slip estimation for off-road vehicles
   date: '2018-09-09'
   summary: Markov Chain Monte Carlo estimation of a six-parameter slip model, treating parameters as random variables so their uncertainty can feed motion prediction and control.
@@ -77,6 +84,7 @@
     year: 2021
     kind: main
 - id: xc-S_bH1_08
+  field: grid
   title: Photovoltaic module diagnosis with artificial vision
   date: '2018-09-09'
   summary: A portable ground system that fuses RGB and thermal images into 3D to find hot-spots in solar panels while rejecting false alarms from reflections and people.
@@ -87,6 +95,7 @@
     year: 2018
     kind: main
 - id: vkuUFLebJOY
+  field: localization
   title: How GNSS error affects orchard characterization
   date: '2018-09-09'
   summary: Tree parameters estimated from LiDAR depend on GNSS positioning; this video shows statistically how positioning error distorts the orchard point cloud.
@@ -97,6 +106,7 @@
     year: 2020
     kind: main
 - id: -xCNqI73NK8
+  field: energy
   title: Power use of electric vehicles across changing terrain
   date: '2018-09-08'
   summary: Battery power measured as an electric vehicle crosses different terrains, with RTK positioning, stereo vision and semantic terrain segmentation (ERFNet).
@@ -112,6 +122,7 @@
     year: 2019
     kind: related
 - id: maAaeKT7gbQ
+  field: grid
   title: Visual positioning of drones over power lines
   date: '2018-09-08'
   summary: A commercial drone positions itself over overhead transmission lines with a single camera instead of GNSS, reaching about 0.10 m RMS error in field tests.
@@ -127,16 +138,23 @@
     year: 2016
     kind: related
 - id: kVOpNhpKhho
+  field: driving
   title: 'Driver behaviour analysis: reckless or not?'
   date: '2018-08-22'
   summary: Machine learning combines traffic signals detected in onboard camera footage with the vehicle's speed changes to judge whether driving was reckless.
   papers:
+  - doi: 10.1177/1687814019862715
+    title: On the design of a human–robot interaction strategy for commercial vehicle driving based on human cognitive parameters
+    venue: Advances in Mechanical Engineering
+    year: 2019
+    kind: related
   - doi: 10.1016/j.cogsys.2020.08.007
     title: A fuzzy-based driver assistance system using human cognitive parameters and driving style information
     venue: Cognitive Systems Research
     year: 2020
     kind: related
 - id: RvpSv8ZVN8Q
+  field: vision
   title: Semantic action recognition in avocado harvesting
   date: '2018-08-21'
   summary: An SSD–MobileNet detector finds nine object classes on a Chilean avocado farm and links them to seven harvesting actions, a step towards robots that understand farm work.

@@ -6,6 +6,21 @@ intro: Research videos from the GRAI group at Universidad Técnica Federico Sant
 ---
 <p class="video-channel">All videos are on the <a href="https://www.youtube.com/@graiutfsm6837">GRAI UTFSM YouTube channel</a>. Videos play here in YouTube's privacy-enhanced mode; nothing loads from YouTube until you press play.</p>
 
+<section class="vfields" aria-labelledby="vfields-h">
+  <h2 id="vfields-h">The research in these videos</h2>
+  <div class="vfields-grid">
+    {% for f in site.data.video_fields %}
+    {% assign fv = site.data.videos | where: "field", f.id %}
+    <article class="vfield" id="field-{{ f.id }}">
+      <h3>{{ f.title }}</h3>
+      <p>{{ f.summary }}</p>
+      <ul class="vfield-videos">{% for v in fv %}<li><a href="#v-{{ v.id }}">{{ v.title }}</a></li>{% endfor %}</ul>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<h2 class="videos-h">All videos, newest first</h2>
 <ol class="videos">
   {% for v in site.data.videos %}
   <li class="video" id="v-{{ v.id }}">
@@ -16,7 +31,8 @@ intro: Research videos from the GRAI group at Universidad Técnica Federico Sant
       </button>
     </div>
     <div class="video-body">
-      <p class="video-date"><time datetime="{{ v.date }}">{{ v.date | date: "%-d %B %Y" }}</time></p>
+      {% assign vf = site.data.video_fields | where: "id", v.field | first %}
+      <p class="video-date"><time datetime="{{ v.date }}">{{ v.date | date: "%-d %B %Y" }}</time>{% if vf %} · <a href="#field-{{ vf.id }}">{{ vf.title }}</a>{% endif %}</p>
       <h2 class="video-title">{{ v.title }}</h2>
       <p class="video-summary">{{ v.summary }}</p>
       {% if v.papers.size > 0 %}

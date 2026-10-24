@@ -1,0 +1,49 @@
+# Research fields shown in the videos, with a short summary of the work in each.
+# Facts come from the CV (PhD theses, grants) and the Scopus publication list.
+
+- id: vision
+  title: Machine vision for orchards and harvest work
+  summary: >-
+    Deep-learning detectors such as SSD and Faster R-CNN find and count avocados, lemons and apples on the tree.
+    The same tools recognise what harvest workers are doing. This line grew from Dr Juan Pablo Vásconez's PhD (2020)
+    and produced a widely cited comparison of neural networks for fruit detection and counting, written with UC Davis.
+    It continued into human–robot collaboration for avocado harvesting.
+
+- id: terrain
+  title: Field robots that adapt to the ground
+  summary: >-
+    Off-road machines lose accuracy as soil, grass and gravel change under the wheels. We estimate wheel slip with
+    Bayesian (Markov Chain Monte Carlo) methods and retune tracking controllers online for each terrain. Tube-based
+    model predictive control keeps skid-steer robots stable on slippery ground. The work comes from the PhDs of
+    Dr Francisco Yandún and Dr Álvaro Javier Prado (2019), with PUC Chile; these are the topics of FONDECYT projects 1171431 and 1171760.
+
+- id: localization
+  title: Positioning where GNSS fails
+  summary: >-
+    Tree canopies block and distort satellite signals. We measured how GNSS error corrupts LiDAR-based estimates of
+    orchard structure, with the Universitat de Lleida. We also compared visual odometry, photogrammetry, inertial
+    sensing and wheel odometry as alternatives. The line continues in robust moving-horizon estimation that tolerates
+    GNSS outliers, and in LiDAR SLAM for legged robots in orchards.
+
+- id: energy
+  title: Energy-aware electric machinery
+  summary: >-
+    An electric vehicle's power draw depends on the terrain it crosses. We combine RTK positioning with vision that
+    classifies the ground ahead to predict battery demand, so routes can be planned around energy. The same goal
+    runs through FONDECYT project 1201319 on energy-efficient autonomous N-trailer vehicles. Later work estimates power use from GNSS and
+    satellite data alone.
+
+- id: grid
+  title: Robots and vision for the electricity grid
+  summary: >-
+    A drone positions itself over overhead transmission lines with a single camera, where GNSS is unreliable.
+    A portable RGB–thermal system finds faulty solar panels while rejecting false hot-spots. Both came from
+    Dr Oswaldo Menéndez's PhD (2019) at UTFSM, and the line continues in harvesting energy from electric fields
+    to power sensors.
+
+- id: driving
+  title: The human behind the wheel
+  summary: >-
+    Camera footage and vehicle data are combined to judge driving behaviour. This is part of a line on driver
+    assistance and human–machine interaction built on drivers' cognitive state, developed with Dr Juan Pablo
+    Vásconez and Dr Michelle Viscaino. It continues in vision- and LiDAR-based assessment of road condition.
