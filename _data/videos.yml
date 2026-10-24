@@ -7,7 +7,8 @@
   date: '2019-10-10'
   summary: Test run of a Faster R-CNN detector finding avocados on the tree, part of a comparison of deep-learning detectors for fruit detection and counting.
   papers:
-  - doi: 10.1016/j.compag.2020.105348
+  - authors: Vasconez J. P., Delpiano J., Vougioukas S., Auat Cheein F.
+    doi: 10.1016/j.compag.2020.105348
     title: 'Comparison of convolutional neural networks in fruit detection and counting: A comprehensive evaluation'
     venue: Computers and Electronics in Agriculture
     year: 2020
@@ -18,7 +19,8 @@
   date: '2019-10-10'
   summary: Test run of a Single Shot MultiBox Detector (SSD) finding lemons in the canopy, from the same fruit-detection comparison.
   papers:
-  - doi: 10.1016/j.compag.2020.105348
+  - authors: Vasconez J. P., Delpiano J., Vougioukas S., Auat Cheein F.
+    doi: 10.1016/j.compag.2020.105348
     title: 'Comparison of convolutional neural networks in fruit detection and counting: A comprehensive evaluation'
     venue: Computers and Electronics in Agriculture
     year: 2020
@@ -29,7 +31,8 @@
   date: '2019-10-10'
   summary: Test run of an SSD detector finding apples in an orchard, from the same fruit-detection comparison.
   papers:
-  - doi: 10.1016/j.compag.2020.105348
+  - authors: Vasconez J. P., Delpiano J., Vougioukas S., Auat Cheein F.
+    doi: 10.1016/j.compag.2020.105348
     title: 'Comparison of convolutional neural networks in fruit detection and counting: A comprehensive evaluation'
     venue: Computers and Electronics in Agriculture
     year: 2020
@@ -39,19 +42,35 @@
   title: Visual localization for agricultural GNSS-denied environments
   date: '2018-09-11'
   summary: An empirical comparison of visual odometry, photogrammetry, IMU and wheel odometry for positioning field machines where satellite signals are unreliable.
-  papers: []
+  papers:
+  - authors: de Paula Veronese L., Badue C., Auat Cheein F. et al.
+    doi: 10.1016/j.cogsys.2019.03.018
+    title: A single sensor system for mapping in GNSS-denied environments
+    venue: Cognitive Systems Research
+    year: 2019
+    kind: related
+    note: 'A single 3D LiDAR maps large outdoor areas without GNSS: LiDAR odometry, a particle-filter ''virtual GNSS'' matched to a road map, and GraphSLAM to close loops; tested on 3.7 km and 6.5 km routes.'
+  - authors: Veronese L. d. P., Auat Cheein F., Bastos-Filho T. et al.
+    doi: 10.1002/rob.21594
+    title: A Computational Geometry Approach for Localization and Tracking in GPS-denied Environments*
+    venue: Journal of Field Robotics
+    year: 2016
+    kind: related
+    note: Several LiDARs with overlapping views localise each other and track a moving vehicle without GPS, using the Hausdorff distance; about 50 cm error in real-time tests.
 - id: EUY1Digx9GE
   field: terrain
   title: Tuning of trajectory tracking controllers
   date: '2018-09-10'
   summary: Field tests of a tracking controller whose gains are generated with Monte Carlo methods, selected by Expectation Maximization and switched online as the terrain changes.
   papers:
-  - doi: 10.1016/j.jterra.2018.04.001
+  - authors: Prado A. J., Auat Cheein F., Blazic S., Torres-Torriti M.
+    doi: 10.1016/j.jterra.2018.04.001
     title: Probabilistic self-tuning approaches for enhancing performance of autonomous vehicles in changing terrains
     venue: Journal of Terramechanics
     year: 2018
     kind: main
-  - doi: 10.1016/j.engappai.2017.09.013
+  - authors: Prado Á. J., Michałek M. M., Auat Cheein F.
+    doi: 10.1016/j.engappai.2017.09.013
     title: Machine-learning based approaches for self-tuning trajectory tracking controllers under terrain changes in repetitive tasks
     venue: Engineering Applications of Artificial Intelligence
     year: 2018
@@ -62,12 +81,14 @@
   date: '2018-09-10'
   summary: Bi-directional traction control on slippery ground using robust (tube-based) nonlinear model predictive control that keeps the robot within safe bounds despite uncertain dynamics.
   papers:
-  - doi: 10.1016/j.conengprac.2020.104451
+  - authors: Prado Á. J., Torres-Torriti M., Yuz J., Auat Cheein F.
+    doi: 10.1016/j.conengprac.2020.104451
     title: Tube-based nonlinear model predictive control for autonomous skid-steer mobile robots with tire–terrain interactions
     venue: Control Engineering Practice
     year: 2020
     kind: main
-  - doi: 10.1109/LRA.2021.3102328
+  - authors: Prado A. J., Torres-Torriti M., Auat Cheein F.
+    doi: 10.1109/LRA.2021.3102328
     title: Distributed tube-based nonlinear MPC for motion control of skid-steer robots with terra-mechanical constraints
     venue: IEEE Robotics and Automation Letters
     year: 2021
@@ -78,7 +99,8 @@
   date: '2018-09-09'
   summary: Markov Chain Monte Carlo estimation of a six-parameter slip model, treating parameters as random variables so their uncertainty can feed motion prediction and control.
   papers:
-  - doi: 10.1115/1.4051016
+  - authors: Yandun F., Torres-Torriti M., Auat Cheein F.
+    doi: 10.1115/1.4051016
     title: 'Markov Chain Monte Carlo Parameter Estimation for Nonzero Slip Models of Wheeled Mobile Robots: A Skid-Steer Case Study'
     venue: Journal of Mechanisms and Robotics
     year: 2021
@@ -89,7 +111,8 @@
   date: '2018-09-09'
   summary: A portable ground system that fuses RGB and thermal images into 3D to find hot-spots in solar panels while rejecting false alarms from reflections and people.
   papers:
-  - doi: 10.3390/en11071688
+  - authors: Menéndez O., Guamán R., Pérez M., Auat Cheein F.
+    doi: 10.3390/en11071688
     title: Photovoltaic modules diagnosis using artificial vision techniques for artifact minimization
     venue: Energies
     year: 2018
@@ -100,7 +123,8 @@
   date: '2018-09-09'
   summary: Tree parameters estimated from LiDAR depend on GNSS positioning; this video shows statistically how positioning error distorts the orchard point cloud.
   papers:
-  - doi: 10.1016/j.compag.2020.105255
+  - authors: Guevara J., Auat Cheein F., Gené-Mola J. et al.
+    doi: 10.1016/j.compag.2020.105255
     title: Analyzing and overcoming the effects of GNSS error on LiDAR based orchard parameters estimation
     venue: Computers and Electronics in Agriculture
     year: 2020
@@ -111,12 +135,14 @@
   date: '2018-09-08'
   summary: Battery power measured as an electric vehicle crosses different terrains, with RTK positioning, stereo vision and semantic terrain segmentation (ERFNet).
   papers:
-  - doi: 10.1016/j.compeleceng.2019.07.003
+  - authors: Romero Schmidt J., Auat Cheein F.
+    doi: 10.1016/j.compeleceng.2019.07.003
     title: Prognosis of the energy and instantaneous power consumption in electric vehicles enhanced by visual terrain classification
     venue: Computers and Electrical Engineering
     year: 2019
     kind: main
-  - doi: 10.1016/j.compag.2019.104868
+  - authors: Romero Schmidt J., Auat Cheein F.
+    doi: 10.1016/j.compag.2019.104868
     title: Assessment of power consumption of electric machinery in agricultural tasks for enhancing the route planning problem
     venue: Computers and Electronics in Agriculture
     year: 2019
@@ -127,12 +153,14 @@
   date: '2018-09-08'
   summary: A commercial drone positions itself over overhead transmission lines with a single camera instead of GNSS, reaching about 0.10 m RMS error in field tests.
   papers:
-  - doi: 10.3390/app9010165
+  - authors: Menéndez O., Pérez M., Auat Cheein F.
+    doi: 10.3390/app9010165
     title: Visual-based positioning of aerial maintenance platforms on overhead transmission lines
     venue: Applied Sciences
     year: 2019
     kind: main
-  - doi: 10.1109/MFI.2016.7849523
+  - authors: Menendez O. A., Perez M., Auat Cheein F.
+    doi: 10.1109/MFI.2016.7849523
     title: Vision based inspection of transmission lines using unmanned aerial vehicles
     venue: IEEE MFI 2016
     year: 2016
@@ -143,12 +171,14 @@
   date: '2018-08-22'
   summary: Machine learning combines traffic signals detected in onboard camera footage with the vehicle's speed changes to judge whether driving was reckless.
   papers:
-  - doi: 10.1177/1687814019862715
+  - authors: Vasconez J. P., Carvajal D., Auat Cheein F.
+    doi: 10.1177/1687814019862715
     title: On the design of a human–robot interaction strategy for commercial vehicle driving based on human cognitive parameters
     venue: Advances in Mechanical Engineering
     year: 2019
     kind: related
-  - doi: 10.1016/j.cogsys.2020.08.007
+  - authors: Vasconez J. P., Viscaino M., Guevara L., Auat Cheein F.
+    doi: 10.1016/j.cogsys.2020.08.007
     title: A fuzzy-based driver assistance system using human cognitive parameters and driving style information
     venue: Cognitive Systems Research
     year: 2020
@@ -159,12 +189,14 @@
   date: '2018-08-21'
   summary: An SSD–MobileNet detector finds nine object classes on a Chilean avocado farm and links them to seven harvesting actions, a step towards robots that understand farm work.
   papers:
-  - doi: 10.1109/ICA-ACCA.2018.8609848
+  - authors: Vasconez J. P., Salvo J., Auat Cheein F.
+    doi: 10.1109/ICA-ACCA.2018.8609848
     title: Toward semantic action recognition for avocado harvesting process based on single shot multibox detector
     venue: IEEE ICA-ACCA 2018
     year: 2018
     kind: main
-  - doi: 10.1016/j.compag.2021.106057
+  - authors: Vasconez J. P., Admoni H., Auat Cheein F.
+    doi: 10.1016/j.compag.2021.106057
     title: A methodology for semantic action recognition based on pose and human-object interaction in avocado harvesting processes
     venue: Computers and Electronics in Agriculture
     year: 2021
