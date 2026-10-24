@@ -25,6 +25,8 @@ title: About
   <div><strong>Top 2%</strong><span>Stanford/Elsevier scientists, 2023–2026</span></div>
 </section>
 
+{% include slideshow.html %}
+
 <section class="two-col">
   <div>
     <h2>About</h2>

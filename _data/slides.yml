@@ -1,0 +1,71 @@
+# Slides for the presentation on the home page, shown in this order.
+# Fields: kicker (small line above the title), title, text, points (list), image, link, link_text,
+#         style: photo | image | numbers | timeline | default
+#         numbers: list of {value, label}    steps: list of {years, place}
+
+- style: photo
+  kicker: Who I am
+  title: Fernando Auat Cheein
+  text: Professor of Engineering and Director of the Harper Institute of Technology at Harper Adams University, UK.
+  image: /assets/img/profile.jpg
+
+- style: image
+  kicker: The mission
+  title: Robots, AI and digital twins for the farms of the future
+  text: Machines that perceive, decide, and can be shown to be safe in real fields, from orchards and arable land to livestock.
+  image: /assets/img/robot-apple.jpg
+
+- style: default
+  kicker: Three pillars
+  title: The Harper Institute of Technology
+  points:
+    - "Digital Twinning: probabilistic models of machines, crops and fields that support decisions and safety assurance"
+    - "Artificial Intelligence: perception that keeps working outdoors, from LiDAR to hyperspectral and satellite imagery"
+    - "Robotics: autonomous vehicles and manipulators for agriculture and forestry"
+
+- style: timeline
+  kicker: Career
+  title: Two decades across three continents
+  steps:
+    - { years: "2002–2011", place: "National University of San Juan, Argentina · MSc, PhD and postdoc in control systems and robotics" }
+    - { years: "2011–2026", place: "Universidad Técnica Federico Santa María, Chile · from researcher to full professor" }
+    - { years: "2022–2024", place: "Heriot-Watt University and the National Robotarium, UK" }
+    - { years: "2024–", place: "Harper Adams University, UK · Director, Harper Institute of Technology" }
+
+- style: default
+  kicker: Research highlights
+  title: What we work on now
+  points:
+    - "SLAM and navigation for legged and wheeled robots in orchards"
+    - "Selective laser weeding with real-time tracking"
+    - "Spectral sensing of crop water stress, nutrients and food quality"
+    - "Safety certification of autonomous machinery (ISO 18497, ISO 25119)"
+  link: /research/
+  link_text: Explore the research
+
+- style: numbers
+  kicker: Impact
+  title: Research that travels
+  numbers:
+    - { value: "200+", label: "peer-reviewed papers" }
+    - { value: "4,200+", label: "citations" }
+    - { value: "35 / 42", label: "h-index, Scopus / Google Scholar" }
+    - { value: "Top 2%", label: "Stanford/Elsevier scientists, 2023–2026" }
+  text: Cited in patents by Honda, Sony and Stiga, and in policy documents from the UK Government, the European Parliamentary Research Service and the FAO.
+
+- style: numbers
+  kicker: People and partners
+  title: A global network
+  numbers:
+    - { value: "13", label: "PhD graduates, now in academia and industry" }
+    - { value: "73", label: "collaborating institutions" }
+    - { value: "21", label: "countries" }
+  link: /network/
+  link_text: See the collaboration map
+
+- style: default
+  kicker: Work with us
+  title: Join the Harper Institute of Technology
+  text: We welcome prospective PhD students, postdocs, fellowship candidates and industry partners in agricultural robotics and AI.
+  link: /#contact
+  link_text: Get in touch
