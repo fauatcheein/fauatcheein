@@ -1,17 +1,21 @@
 {
-  "updated": "2026-10-24T05:41:11Z",
+  "updated": "2026-10-25T05:39:39Z",
   "since": "2026-10-01",
-  "total": 30,
+  "total": 51,
   "countries": {
-    "GB": 17,
+    "GB": 35,
     "CL": 7,
+    "IT": 5,
     "IN": 4,
-    "AE": 2
+    "AE": 3,
+    "NG": 2
   },
   "names": {
     "GB": "United Kingdom",
     "CL": "Chile",
+    "IT": "Italy",
     "IN": "India",
-    "AE": "United Arab Emirates"
+    "AE": "United Arab Emirates",
+    "NG": "Nigeria"
   }
 }
