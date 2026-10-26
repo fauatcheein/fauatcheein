@@ -46,8 +46,10 @@
 
 - group: PhD graduates
   members:
-    - name: Dr. Sebastian Estrada
+    - name: Dr. Juan Sebastián Estrada
       role: PhD 2026 · Universidad Técnica Federico Santa María, Chile
+      linkedin: "https://www.linkedin.com/in/juan-sebastián-estrada-903b65232"
+      scholar: "https://scholar.google.com/citations?user=_3BAl-oAAAAJ&hl=en"
     - name: Dr. Franco Jorquera
       role: PhD 2025 · Assistant Professor, Universidad Técnica Federico Santa María, Chile
     - name: Dr. Michelle Viscaíno
