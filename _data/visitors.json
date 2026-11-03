@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-02T13:29:39Z",
+  "updated": "2026-11-03T12:47:23Z",
   "since": "2026-10-01",
-  "total": 151,
+  "total": 164,
   "countries": {
-    "GB": 102,
+    "GB": 112,
     "CL": 20,
     "IN": 5,
     "IT": 5,
@@ -15,6 +15,7 @@
     "SA": 2,
     "BD": 1,
     "EC": 1,
+    "MX": 1,
     "US": 1
   },
   "names": {
@@ -30,6 +31,7 @@
     "SA": "Saudi Arabia",
     "BD": "Bangladesh",
     "EC": "Ecuador",
+    "MX": "Mexico",
     "US": "United States"
   }
 }
