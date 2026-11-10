@@ -1,10 +1,11 @@
 {
-  "updated": "2026-11-09T13:53:01Z",
+  "updated": "2026-11-10T13:27:34Z",
   "since": "2026-10-01",
-  "total": 204,
+  "total": 213,
   "countries": {
-    "GB": 147,
+    "GB": 149,
     "CL": 20,
+    "EC": 7,
     "ES": 6,
     "IN": 5,
     "IT": 5,
@@ -12,7 +13,6 @@
     "DE": 4,
     "AR": 3,
     "US": 3,
-    "EC": 2,
     "NG": 2,
     "SA": 2,
     "BD": 1,
@@ -22,6 +22,7 @@
   "names": {
     "GB": "United Kingdom",
     "CL": "Chile",
+    "EC": "Ecuador",
     "ES": "Spain",
     "IN": "India",
     "IT": "Italy",
@@ -29,7 +30,6 @@
     "DE": "Germany",
     "AR": "Argentina",
     "US": "United States",
-    "EC": "Ecuador",
     "NG": "Nigeria",
     "SA": "Saudi Arabia",
     "BD": "Bangladesh",
