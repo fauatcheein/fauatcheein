@@ -1,11 +1,12 @@
 {
-  "updated": "2026-11-14T12:10:31Z",
+  "updated": "2026-11-15T12:44:16Z",
   "since": "2026-10-01",
-  "total": 219,
+  "total": 223,
   "countries": {
-    "GB": 153,
+    "GB": 159,
     "CL": 20,
     "EC": 8,
+    "HK": 7,
     "ES": 6,
     "IN": 5,
     "IT": 5,
@@ -23,6 +24,7 @@
     "GB": "United Kingdom",
     "CL": "Chile",
     "EC": "Ecuador",
+    "HK": "Hong Kong",
     "ES": "Spain",
     "IN": "India",
     "IT": "Italy",
