@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-27T15:03:38Z",
+  "updated": "2026-11-28T14:11:14Z",
   "since": "2026-10-01",
-  "total": 282,
+  "total": 284,
   "countries": {
-    "GB": 188,
+    "GB": 189,
     "CL": 24,
     "EC": 22,
     "HK": 7,
@@ -17,6 +17,7 @@
     "NG": 2,
     "SA": 2,
     "BD": 1,
+    "BR": 1,
     "GR": 1,
     "MX": 1,
     "SE": 1
@@ -36,6 +37,7 @@
     "NG": "Nigeria",
     "SA": "Saudi Arabia",
     "BD": "Bangladesh",
+    "BR": "Brazil",
     "GR": "Greece",
     "MX": "Mexico",
     "SE": "Sweden"
